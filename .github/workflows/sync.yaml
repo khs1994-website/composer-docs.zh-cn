@@ -23,7 +23,7 @@ jobs:
           GIT_URL: https://github.com/5-say/composer-doc-cn
       - name: Generate SUMMARY
         env:
-          SRC_FOLDER: cn-introduction
+          SRC_FOLDER: composer/cn-introduction
           GITBOOK_TITLE: "[Composer 中文文档](https://github.com/5-say/composer-doc-cn)"
         run: |
           set -x
@@ -45,7 +45,7 @@ jobs:
           PCIT_GIT_TOKEN: ${{ secrets.PCIT_GIT_TOKEN }}
           PCIT_GIT_URL: github.com/${{ github.repository }}
           PCIT_KEEP_HISTORY: "1"
-          PCIT_LOCAL_DIR: cn-introduction
+          PCIT_LOCAL_DIR: composer/cn-introduction
           PCIT_MESSAGE: Sync from 5-say/composer-doc-cn by PCIT ${{ github.sha }}
           PCIT_TARGET_BRANCH: master
           PCIT_USERNAME: khs1994

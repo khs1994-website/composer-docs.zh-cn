@@ -1,0 +1,22 @@
+{
+  "title": "Composer 中文文档",
+  "language": "zh-hans",
+  "links": {
+    "sidebar": {
+      "Home": "https://docs.khs1994.com"
+    }
+  },
+  "plugins": [
+    "-sharing",
+    "-highlight",
+    "-livereload",
+    "prism"
+  ],
+  "pluginsConfig": {
+    "prism": {
+      "css": [
+        "prismjs/themes/prism-solarizedlight.css"
+      ]
+    }
+  }
+}

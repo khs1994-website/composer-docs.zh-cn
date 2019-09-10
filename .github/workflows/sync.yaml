@@ -1,0 +1,51 @@
+on:
+  push:
+    branches:
+      - sync
+  pull_request:
+  schedule:
+    - cron: '0 0 */1 * *'
+
+name: Sync
+
+jobs:
+  sync-from-upstream:
+    name: Sync-From-Upstream
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+        with:
+          fetch-depth: 2
+      - name: Fetch upstream
+        run: |
+          git clone --depth=1 ${GIT_URL} composer
+        env:
+          GIT_URL: https://github.com/5-say/composer-doc-cn
+      - name: Generate SUMMARY
+        env:
+          SRC_FOLDER: cn-introduction
+          GITBOOK_TITLE: "[Composer 中文文档](https://github.com/5-say/composer-doc-cn)"
+        run: |
+          set -x
+          mkdir -p ${SRC_FOLDER}/.github/workflows
+          cp -a .github/workflows/gitbook.yaml ${SRC_FOLDER}/.github/workflows/
+          cp book.json ${SRC_FOLDER}
+          cd ${SRC_FOLDER}
+          mv 00-intro.md README.md
+          npm init -f
+          npm install gitbook-summary
+          npx book sm -t "${GITBOOK_TITLE}" -i node_modules
+          rm -rf node_modules package.json package-lock.json
+          ls -la
+      - name: Push docs src
+        if: github.event_name == 'push'
+        uses: docker://pcit/pages
+        env:
+          PCIT_EMAIL: khs1994@khs1994.com
+          PCIT_GIT_TOKEN: ${{ secrets.PCIT_GIT_TOKEN }}
+          PCIT_GIT_URL: github.com/${{ github.repository }}
+          PCIT_KEEP_HISTORY: "1"
+          PCIT_LOCAL_DIR: cn-introduction
+          PCIT_MESSAGE: Sync from 5-say/composer-doc-cn by PCIT ${{ github.sha }}
+          PCIT_TARGET_BRANCH: master
+          PCIT_USERNAME: khs1994

@@ -38,7 +38,7 @@ jobs:
           rm -rf node_modules package.json package-lock.json
           ls -la
       - name: Push docs src
-        if: github.event_name == 'push'
+        if: github.event_name == 'push' || github.event_name == 'schedule'
         uses: docker://pcit/pages
         env:
           PCIT_EMAIL: khs1994@khs1994.com

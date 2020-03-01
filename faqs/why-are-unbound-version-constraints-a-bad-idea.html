@@ -1,0 +1,554 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Why Are Unbound Version Constraints A Bad Idea · Composer 中文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="why-are-version-constraints-combining-comparisons-and-wildcards-a-bad-idea.html" />
+    
+    
+    <link rel="prev" href="should-i-commit-the-dependencies-in-my-vendor-directory.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://docs.khs1994.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Articles
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../articles/aliases.html">
+            
+                <a href="../articles/aliases.html">
+            
+                    
+                    Aliases
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../articles/custom-installers.html">
+            
+                <a href="../articles/custom-installers.html">
+            
+                    
+                    Custom Installers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../articles/handling-private-packages-with-satis.html">
+            
+                <a href="../articles/handling-private-packages-with-satis.html">
+            
+                    
+                    Handling Private Packages With Satis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../articles/plugins.html">
+            
+                <a href="../articles/plugins.html">
+            
+                    
+                    Plugins
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../articles/scripts.html">
+            
+                <a href="../articles/scripts.html">
+            
+                    
+                    Scripts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../articles/troubleshooting.html">
+            
+                <a href="../articles/troubleshooting.html">
+            
+                    
+                    Troubleshooting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../articles/vendor-binaries.html">
+            
+                <a href="../articles/vendor-binaries.html">
+            
+                    
+                    Vendor Binaries
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Dev
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../dev/DefaultPolicy.html">
+            
+                <a href="../dev/DefaultPolicy.html">
+            
+                    
+                    Default Policy
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    Faqs
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="how-do-i-install-a-package-to-a-custom-path-for-my-framework.html">
+            
+                <a href="how-do-i-install-a-package-to-a-custom-path-for-my-framework.html">
+            
+                    
+                    How Do I Install A Package To A Custom Path For My Framework
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="should-i-commit-the-dependencies-in-my-vendor-directory.html">
+            
+                <a href="should-i-commit-the-dependencies-in-my-vendor-directory.html">
+            
+                    
+                    Should I Commit The Dependencies In My Vendor Directory
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.3" data-path="why-are-unbound-version-constraints-a-bad-idea.html">
+            
+                <a href="why-are-unbound-version-constraints-a-bad-idea.html">
+            
+                    
+                    Why Are Unbound Version Constraints A Bad Idea
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="why-are-version-constraints-combining-comparisons-and-wildcards-a-bad-idea.html">
+            
+                <a href="why-are-version-constraints-combining-comparisons-and-wildcards-a-bad-idea.html">
+            
+                    
+                    Why Are Version Constraints Combining Comparisons And Wildcards A Bad Idea
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="why-can't-composer-load-repositories-recursively.html">
+            
+                <a href="why-can't-composer-load-repositories-recursively.html">
+            
+                    
+                    Why Can T Composer Load Repositories Recursively
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../01-basic-usage.html">
+            
+                <a href="../01-basic-usage.html">
+            
+                    
+                    01 Basic Usage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../02-libraries.html">
+            
+                <a href="../02-libraries.html">
+            
+                    
+                    02 Libraries
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../03-cli.html">
+            
+                <a href="../03-cli.html">
+            
+                    
+                    03 Cli
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../04-schema.html">
+            
+                <a href="../04-schema.html">
+            
+                    
+                    04 Schema
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../05-repositories.html">
+            
+                <a href="../05-repositories.html">
+            
+                    
+                    05 Repositories
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../06-community.html">
+            
+                <a href="../06-community.html">
+            
+                    
+                    06 Community
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Why Are Unbound Version Constraints A Bad Idea</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="why-are-unbound-version-constraints-a-bad-idea">Why are unbound version constraints a bad idea?</h1>
+<p>A version constraint without an upper bound such as <code>*</code>, <code>&gt;=3.4</code> or
+<code>dev-master</code> will allow updates to any future version of the dependency.
+This includes major versions breaking backward compatibility.</p>
+<p>Once a release of your package is tagged, you cannot tweak its dependencies
+anymore in case a dependency breaks BC - you have to do a new release but the
+previous one stays broken.</p>
+<p>The only good alternative is to define an upper bound on your constraints,
+which you can increase in a new release after testing that your package is
+compatible with the new major version of your dependency.</p>
+<p>For example instead of using <code>&gt;=3.4</code> you should use <code>~3.4</code> which allows all
+versions up to <code>3.999</code> but does not include <code>4.0</code> and above. The <code>~</code> operator
+works very well with libraries follow <a href="http://semver.org" target="_blank">semantic versioning</a>.</p>
+<p><strong>Note:</strong> As a package maintainer, you can make the life of your users easier
+by providing an <a href="../articles/aliases.html">alias version</a> for your development
+branch to allow it to match bound constraints.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="should-i-commit-the-dependencies-in-my-vendor-directory.html" class="navigation navigation-prev " aria-label="Previous page: Should I Commit The Dependencies In My Vendor Directory">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="why-are-version-constraints-combining-comparisons-and-wildcards-a-bad-idea.html" class="navigation navigation-next " aria-label="Next page: Why Are Version Constraints Combining Comparisons And Wildcards A Bad Idea">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Why Are Unbound Version Constraints A Bad Idea","level":"1.4.3","depth":2,"next":{"title":"Why Are Version Constraints Combining Comparisons And Wildcards A Bad Idea","level":"1.4.4","depth":2,"path":"faqs/why-are-version-constraints-combining-comparisons-and-wildcards-a-bad-idea.md","ref":"faqs/why-are-version-constraints-combining-comparisons-and-wildcards-a-bad-idea.md","articles":[]},"previous":{"title":"Should I Commit The Dependencies In My Vendor Directory","level":"1.4.2","depth":2,"path":"faqs/should-i-commit-the-dependencies-in-my-vendor-directory.md","ref":"faqs/should-i-commit-the-dependencies-in-my-vendor-directory.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Composer 中文文档","language":"zh-hans","links":{"sidebar":{"Home":"https://docs.khs1994.com"}},"gitbook":"*"},"file":{"path":"faqs/why-are-unbound-version-constraints-a-bad-idea.md","mtime":"2020-03-01T00:14:17.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-01T00:14:54.926Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

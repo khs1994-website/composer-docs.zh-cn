@@ -1,0 +1,664 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Troubleshooting · Composer 中文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="vendor-binaries.html" />
+    
+    
+    <link rel="prev" href="scripts.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://docs.khs1994.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Articles
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="aliases.html">
+            
+                <a href="aliases.html">
+            
+                    
+                    Aliases
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="custom-installers.html">
+            
+                <a href="custom-installers.html">
+            
+                    
+                    Custom Installers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="handling-private-packages-with-satis.html">
+            
+                <a href="handling-private-packages-with-satis.html">
+            
+                    
+                    Handling Private Packages With Satis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="plugins.html">
+            
+                <a href="plugins.html">
+            
+                    
+                    Plugins
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="scripts.html">
+            
+                <a href="scripts.html">
+            
+                    
+                    Scripts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.6" data-path="troubleshooting.html">
+            
+                <a href="troubleshooting.html">
+            
+                    
+                    Troubleshooting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="vendor-binaries.html">
+            
+                <a href="vendor-binaries.html">
+            
+                    
+                    Vendor Binaries
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Dev
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../dev/DefaultPolicy.html">
+            
+                <a href="../dev/DefaultPolicy.html">
+            
+                    
+                    Default Policy
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    Faqs
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../faqs/how-do-i-install-a-package-to-a-custom-path-for-my-framework.html">
+            
+                <a href="../faqs/how-do-i-install-a-package-to-a-custom-path-for-my-framework.html">
+            
+                    
+                    How Do I Install A Package To A Custom Path For My Framework
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../faqs/should-i-commit-the-dependencies-in-my-vendor-directory.html">
+            
+                <a href="../faqs/should-i-commit-the-dependencies-in-my-vendor-directory.html">
+            
+                    
+                    Should I Commit The Dependencies In My Vendor Directory
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../faqs/why-are-unbound-version-constraints-a-bad-idea.html">
+            
+                <a href="../faqs/why-are-unbound-version-constraints-a-bad-idea.html">
+            
+                    
+                    Why Are Unbound Version Constraints A Bad Idea
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../faqs/why-are-version-constraints-combining-comparisons-and-wildcards-a-bad-idea.html">
+            
+                <a href="../faqs/why-are-version-constraints-combining-comparisons-and-wildcards-a-bad-idea.html">
+            
+                    
+                    Why Are Version Constraints Combining Comparisons And Wildcards A Bad Idea
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../faqs/why-can't-composer-load-repositories-recursively.html">
+            
+                <a href="../faqs/why-can't-composer-load-repositories-recursively.html">
+            
+                    
+                    Why Can T Composer Load Repositories Recursively
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../01-basic-usage.html">
+            
+                <a href="../01-basic-usage.html">
+            
+                    
+                    01 Basic Usage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../02-libraries.html">
+            
+                <a href="../02-libraries.html">
+            
+                    
+                    02 Libraries
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../03-cli.html">
+            
+                <a href="../03-cli.html">
+            
+                    
+                    03 Cli
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../04-schema.html">
+            
+                <a href="../04-schema.html">
+            
+                    
+                    04 Schema
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../05-repositories.html">
+            
+                <a href="../05-repositories.html">
+            
+                    
+                    05 Repositories
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../06-community.html">
+            
+                <a href="../06-community.html">
+            
+                    
+                    06 Community
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Troubleshooting</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <!--
+    tagline: Solving problems
+-->
+<h1 id="troubleshooting">Troubleshooting</h1>
+<p>This is a list of common pitfalls on using Composer, and how to avoid them.</p>
+<h2 id="general">General</h2>
+<ol>
+<li><p>Before asking anyone, run <a href="../03-cli.html#diagnose"><code>composer diagnose</code></a> to check
+for common problems. If it all checks out, proceed to the next steps.</p>
+</li>
+<li><p>When facing any kind of problems using Composer, be sure to <strong>work with the
+latest version</strong>. See <a href="../03-cli.html#self-update">self-update</a> for details.</p>
+</li>
+<li><p>Make sure you have no problems with your setup by running the installer&apos;s
+checks via <code>curl -sS https://getcomposer.org/installer | php -- --check</code>.</p>
+</li>
+<li><p>Ensure you&apos;re <strong>installing vendors straight from your <code>composer.json</code></strong> via
+<code>rm -rf vendor &amp;&amp; composer update -v</code> when troubleshooting, excluding any
+possible interferences with existing vendor installations or <code>composer.lock</code>
+entries.</p>
+</li>
+</ol>
+<h2 id="package-not-found">Package not found</h2>
+<ol>
+<li><p>Double-check you <strong>don&apos;t have typos</strong> in your <code>composer.json</code> or repository
+branches and tag names.</p>
+</li>
+<li><p>Be sure to <strong>set the right
+<a href="../04-schema.html#minimum-stability">minimum-stability</a></strong>. To get started or be
+sure this is no issue, set <code>minimum-stability</code> to &quot;dev&quot;.</p>
+</li>
+<li><p>Packages <strong>not coming from <a href="https://packagist.org/" target="_blank">Packagist</a></strong> should
+always be <strong>defined in the root package</strong> (the package depending on all
+vendors).</p>
+</li>
+<li><p>Use the <strong>same vendor and package name</strong> throughout all branches and tags of
+your repository, especially when maintaining a third party fork and using
+<code>replace</code>.</p>
+</li>
+</ol>
+<h2 id="package-not-found-on-travis-ciorg">Package not found on travis-ci.org</h2>
+<ol>
+<li><p>Check the <a href="#package-not-found">&quot;Package not found&quot;</a> item above.</p>
+</li>
+<li><p>If the package tested is a dependency of one of its dependencies (cyclic
+dependency), the problem might be that composer is not able to detect the version
+of the package properly. If it is a git clone it is generally alright and Composer
+will detect the version of the current branch, but travis does shallow clones so
+that process can fail when testing pull requests and feature branches in general.
+The best solution is to define the version you are on via an environment variable
+called COMPOSER_ROOT_VERSION. You set it to <code>dev-master</code> for example to define
+the root package&apos;s version as <code>dev-master</code>.
+Use: <code>before_script: COMPOSER_ROOT_VERSION=dev-master composer install</code> to export
+the variable for the call to composer.</p>
+</li>
+</ol>
+<h2 id="need-to-override-a-package-version">Need to override a package version</h2>
+<p>Let say your project depends on package A which in turn depends on a specific
+version of package B (say 0.1) and you need a different version of that
+package - version 0.11.</p>
+<p>You can fix this by aliasing version 0.11 to 0.1:</p>
+<p>composer.json:</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;require&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;A&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0.2&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;B&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0.11 as 0.1&quot;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>See <a href="aliases.html">aliases</a> for more information.</p>
+<h2 id="memory-limit-errors">Memory limit errors</h2>
+<p>If composer shows memory errors on some commands:</p>
+<p><code>PHP Fatal error:  Allowed memory size of XXXXXX bytes exhausted <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>...</span><span class="token punctuation">&gt;</span></span></code></p>
+<p>The PHP <code>memory_limit</code> should be increased.</p>
+<blockquote>
+<p><strong>Note:</strong> Composer internally increases the <code>memory_limit</code> to <code>512M</code>.
+If you have memory issues when using composer, please consider <a href="https://github.com/composer/composer/issues" target="_blank">creating
+an issue ticket</a> so we can look into it.</p>
+</blockquote>
+<p>To get the current <code>memory_limit</code> value, run:</p>
+<pre class="language-"><code class="lang-sh">php -r <span class="token string">&quot;echo ini_get(&apos;memory_limit&apos;).PHP_EOL;&quot;</span>
+</code></pre>
+<p>Try increasing the limit in your <code>php.ini</code> file (ex. <code>/etc/php5/cli/php.ini</code> for
+Debian-like systems):</p>
+<pre class="language-"><code class="lang-ini"><span class="token comment">; Use -1 for unlimited or define an explicit value like 512M</span>
+<span class="token constant">memory_limit</span> <span class="token attr-value"><span class="token punctuation">=</span> -1</span>
+</code></pre>
+<p>Or, you can increase the limit with a command-line argument:</p>
+<pre class="language-"><code class="lang-sh">php -d <span class="token assign-left variable">memory_limit</span><span class="token operator">=</span>-1 composer.phar <span class="token operator">&lt;</span><span class="token punctuation">..</span>.<span class="token operator">&gt;</span>
+</code></pre>
+<h2 id="the-system-cannot-find-the-path-specified-windows">&quot;The system cannot find the path specified&quot; (Windows)</h2>
+<ol>
+<li>Open regedit.</li>
+<li>Search for an <code>AutoRun</code> key inside <code>HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor</code>
+or <code>HKEY_CURRENT_USER\Software\Microsoft\Command Processor</code>.</li>
+<li>Check if it contains any path to non-existent file, if it&apos;s the case, just remove them.</li>
+</ol>
+<h2 id="api-rate-limit-and-oauth-tokens">API rate limit and OAuth tokens</h2>
+<p>Because of GitHub&apos;s rate limits on their API it can happen that Composer prompts
+for authentication asking your username and password so it can go ahead with its work.</p>
+<p>If you would prefer not to provide your GitHub credentials to Composer you can
+manually create a token using the following procedure:</p>
+<ol>
+<li><p><a href="https://github.com/settings/applications" target="_blank">Create</a> an OAuth token on GitHub.
+<a href="https://github.com/blog/1509-personal-api-tokens" target="_blank">Read more</a> on this.</p>
+</li>
+<li><p>Add it to the configuration running <code>composer config -g github-oauth.github.com <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>oauthtoken</span><span class="token punctuation">&gt;</span></span></code></p>
+</li>
+</ol>
+<p>Now Composer should install/update without asking for authentication.</p>
+<h2 id="procopen-fork-failed-errors">proc_open(): fork failed errors</h2>
+<p>If composer shows proc_open() fork failed on some commands:</p>
+<p><code>PHP Fatal error: Uncaught exception &apos;ErrorException&apos; with message &apos;proc_open(): fork failed - Cannot allocate memory&apos; in phar</code></p>
+<p>This could be happening because the VPS runs out of memory and has no Swap space enabled.</p>
+<pre class="language-"><code class="lang-sh"><span class="token function">free</span> -m
+
+total used <span class="token function">free</span> shared buffers cached
+Mem: <span class="token number">2048</span> <span class="token number">357</span> <span class="token number">1690</span> <span class="token number">0</span> <span class="token number">0</span> <span class="token number">237</span>
+-/+ buffers/cache: <span class="token number">119</span> <span class="token number">1928</span>
+Swap: <span class="token number">0</span> <span class="token number">0</span> <span class="token number">0</span>
+</code></pre>
+<p>To enable the swap you can use for example:</p>
+<pre class="language-"><code class="lang-sh">/bin/dd <span class="token assign-left variable">if</span><span class="token operator">=</span>/dev/zero <span class="token assign-left variable">of</span><span class="token operator">=</span>/var/swap.1 <span class="token assign-left variable">bs</span><span class="token operator">=</span>1M <span class="token assign-left variable">count</span><span class="token operator">=</span><span class="token number">1024</span>
+/sbin/mkswap /var/swap.1
+/sbin/swapon /var/swap.1
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="scripts.html" class="navigation navigation-prev " aria-label="Previous page: Scripts">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="vendor-binaries.html" class="navigation navigation-next " aria-label="Next page: Vendor Binaries">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Troubleshooting","level":"1.2.6","depth":2,"next":{"title":"Vendor Binaries","level":"1.2.7","depth":2,"path":"articles/vendor-binaries.md","ref":"articles/vendor-binaries.md","articles":[]},"previous":{"title":"Scripts","level":"1.2.5","depth":2,"path":"articles/scripts.md","ref":"articles/scripts.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Composer 中文文档","language":"zh-hans","links":{"sidebar":{"Home":"https://docs.khs1994.com"}},"gitbook":"*"},"file":{"path":"articles/troubleshooting.md","mtime":"2020-03-01T00:14:17.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-01T00:14:54.926Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

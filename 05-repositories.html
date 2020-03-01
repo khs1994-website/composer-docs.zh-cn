@@ -1,0 +1,937 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>05 Repositories · Composer 中文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="06-community.html" />
+    
+    
+    <link rel="prev" href="04-schema.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://docs.khs1994.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Articles
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="articles/aliases.html">
+            
+                <a href="articles/aliases.html">
+            
+                    
+                    Aliases
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="articles/custom-installers.html">
+            
+                <a href="articles/custom-installers.html">
+            
+                    
+                    Custom Installers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="articles/handling-private-packages-with-satis.html">
+            
+                <a href="articles/handling-private-packages-with-satis.html">
+            
+                    
+                    Handling Private Packages With Satis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="articles/plugins.html">
+            
+                <a href="articles/plugins.html">
+            
+                    
+                    Plugins
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="articles/scripts.html">
+            
+                <a href="articles/scripts.html">
+            
+                    
+                    Scripts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="articles/troubleshooting.html">
+            
+                <a href="articles/troubleshooting.html">
+            
+                    
+                    Troubleshooting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="articles/vendor-binaries.html">
+            
+                <a href="articles/vendor-binaries.html">
+            
+                    
+                    Vendor Binaries
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Dev
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="dev/DefaultPolicy.html">
+            
+                <a href="dev/DefaultPolicy.html">
+            
+                    
+                    Default Policy
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    Faqs
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="faqs/how-do-i-install-a-package-to-a-custom-path-for-my-framework.html">
+            
+                <a href="faqs/how-do-i-install-a-package-to-a-custom-path-for-my-framework.html">
+            
+                    
+                    How Do I Install A Package To A Custom Path For My Framework
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="faqs/should-i-commit-the-dependencies-in-my-vendor-directory.html">
+            
+                <a href="faqs/should-i-commit-the-dependencies-in-my-vendor-directory.html">
+            
+                    
+                    Should I Commit The Dependencies In My Vendor Directory
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="faqs/why-are-unbound-version-constraints-a-bad-idea.html">
+            
+                <a href="faqs/why-are-unbound-version-constraints-a-bad-idea.html">
+            
+                    
+                    Why Are Unbound Version Constraints A Bad Idea
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="faqs/why-are-version-constraints-combining-comparisons-and-wildcards-a-bad-idea.html">
+            
+                <a href="faqs/why-are-version-constraints-combining-comparisons-and-wildcards-a-bad-idea.html">
+            
+                    
+                    Why Are Version Constraints Combining Comparisons And Wildcards A Bad Idea
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="faqs/why-can't-composer-load-repositories-recursively.html">
+            
+                <a href="faqs/why-can't-composer-load-repositories-recursively.html">
+            
+                    
+                    Why Can T Composer Load Repositories Recursively
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="01-basic-usage.html">
+            
+                <a href="01-basic-usage.html">
+            
+                    
+                    01 Basic Usage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="02-libraries.html">
+            
+                <a href="02-libraries.html">
+            
+                    
+                    02 Libraries
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="03-cli.html">
+            
+                <a href="03-cli.html">
+            
+                    
+                    03 Cli
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="04-schema.html">
+            
+                <a href="04-schema.html">
+            
+                    
+                    04 Schema
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9" data-path="05-repositories.html">
+            
+                <a href="05-repositories.html">
+            
+                    
+                    05 Repositories
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="06-community.html">
+            
+                <a href="06-community.html">
+            
+                    
+                    06 Community
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >05 Repositories</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p><a name="Repositories"></a></p>
+<h1 id="&#x8D44;&#x6E90;&#x5E93;">&#x8D44;&#x6E90;&#x5E93;</h1>
+<p>&#x672C;&#x7AE0;&#x5C06;&#x89E3;&#x91CA;&#x5305;&#x548C;&#x5E93;&#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x4EC0;&#x4E48;&#x6837;&#x7684;&#x5B58;&#x50A8;&#x5E93;&#x662F;&#x53EF;&#x7528;&#x7684;&#xFF0C;&#x4EE5;&#x53CA;&#x5B83;&#x4EEC;&#x5982;&#x4F55;&#x5DE5;&#x4F5C;&#x3002;</p>
+<hr>
+<ul>
+<li><a href="#Repositories">&#x8D44;&#x6E90;&#x5E93;</a><ul>
+<li><a href="#Concepts">&#x6982;&#x8FF0;</a><ul>
+<li><a href="#Package">&#x5305;</a></li>
+<li><a href="#Repository">&#x8D44;&#x6E90;&#x5E93;</a></li>
+</ul>
+</li>
+<li><a href="#Types">Types</a><ul>
+<li><a href="#Composer">Composer</a><ul>
+<li><a href="#packages">packages</a></li>
+<li><a href="#notify-batch">notify-batch</a></li>
+<li><a href="#includes">includes</a></li>
+<li><a href="#provider-includes">provider-includes and providers-url</a></li>
+<li><a href="#stream-options">stream options</a></li>
+</ul>
+</li>
+<li><a href="#VCS">VCS</a><ul>
+<li><a href="#from-a-VCS">&#x4ECE; VCS &#x8D44;&#x6E90;&#x5E93;&#x52A0;&#x8F7D;&#x4E00;&#x4E2A;&#x5305;</a></li>
+<li><a href="#Using-private">&#x4F7F;&#x7528;&#x79C1;&#x6709;&#x8D44;&#x6E90;&#x5E93;</a></li>
+<li><a href="#Git-alternatives">Git &#x7684;&#x5907;&#x9009;&#x65B9;&#x6848;</a></li>
+<li><a href="#Subversion-Options">Subversion &#x9009;&#x9879;</a></li>
+</ul>
+</li>
+<li><a href="#PEAR">PEAR</a><ul>
+<li><a href="#Custom-vendor-alias">&#x81EA;&#x5B9A;&#x4E49;&#x4F9B;&#x5E94;&#x5546;&#x522B;&#x540D;</a></li>
+</ul>
+</li>
+<li><a href="#Package">Package</a></li>
+</ul>
+</li>
+<li><a href="#Hosting-your-own">Hosting your own</a><ul>
+<li><a href="#Packagist">Packagist</a></li>
+<li><a href="#Satis">Satis</a></li>
+<li><a href="#Artifact">Artifact</a></li>
+</ul>
+</li>
+<li><a href="#Disabling-Packagist">&#x7981;&#x7528; Packagist</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<p><a name="Concepts"></a></p>
+<h2 id="&#x6982;&#x8FF0;">&#x6982;&#x8FF0;</h2>
+<p>&#x5728;&#x6B64;&#x4E4B;&#x524D;&#xFF0C;&#x6211;&#x4EEC;&#x770B;&#x5230;&#x5B58;&#x5728;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x8D44;&#x6E90;&#x5E93;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x4E86;&#x89E3;&#x4E00;&#x4E9B;&#x57FA;&#x672C;&#x6982;&#x5FF5;&#xFF0C;&#x4EE5;&#x7406;&#x89E3; Composer &#x662F;&#x5982;&#x4F55;&#x6784;&#x5EFA;&#x4E8E;&#x5176;&#x4E0A;&#x7684;&#x3002;</p>
+<p><a name="Package"></a></p>
+<h3 id="&#x5305;">&#x5305;</h3>
+<p>Composer &#x662F;&#x4E00;&#x4E2A;&#x4F9D;&#x8D56;&#x7BA1;&#x7406;&#x5DE5;&#x5177;&#x3002;&#x5B83;&#x5728;&#x672C;&#x5730;&#x5B89;&#x88C5;&#x4E00;&#x4E9B;&#x8D44;&#x6E90;&#x5305;&#x3002;&#x4E00;&#x4E2A;&#x5305;&#x672C;&#x8D28;&#x4E0A;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x4E1C;&#x897F;&#x7684;&#x76EE;&#x5F55;&#x3002;&#x901A;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;&#x5B83;&#x5B58;&#x50A8; PHP &#x4EE3;&#x7801;&#xFF0C;&#x4F46;&#x5728;&#x7406;&#x8BBA;&#x4E0A;&#x5B83;&#x53EF;&#x4EE5;&#x662F;&#x4EFB;&#x4F55;&#x4E1C;&#x897F;&#x3002;&#x5E76;&#x4E14;&#x5B83;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x63CF;&#x8FF0;&#xFF0C;&#x5176;&#x4E2D;&#x6709;&#x4E00;&#x4E2A;&#x540D;&#x79F0;&#x548C;&#x4E00;&#x4E2A;&#x7248;&#x672C;&#x53F7;&#xFF0C;&#x8FD9;&#x4E2A;&#x540D;&#x79F0;&#x548C;&#x7248;&#x672C;&#x53F7;&#x7528;&#x4E8E;&#x8BC6;&#x522B;&#x8BE5;&#x5305;&#x3002;</p>
+<p>&#x4E8B;&#x5B9E;&#x4E0A;&#xFF0C;&#x5728; composer &#x5185;&#x90E8;&#x5C06;&#x6BCF;&#x4E00;&#x4E2A;&#x7248;&#x672C;&#x90FD;&#x89C6;&#x4E3A;&#x4E00;&#x4E2A;&#x5355;&#x72EC;&#x7684;&#x5305;&#x3002;&#x5C3D;&#x7BA1;&#x5728;&#x4F60;&#x4F7F;&#x7528; composer &#x65F6;&#x8FD9;&#x79CD;&#x533A;&#x522B;&#x65E0;&#x5173;&#x7D27;&#x8981;&#xFF0C;&#x4F46;&#x5F53;&#x4F60;&#x60F3;&#x6539;&#x53D8;&#x5B83;&#x65F6;&#xFF0C;&#x8FD9;&#x5C31;&#x663E;&#x5F97;&#x81F3;&#x5173;&#x91CD;&#x8981;&#x3002;</p>
+<p>&#x9664;&#x4E86;&#x540D;&#x79F0;&#x548C;&#x7248;&#x672C;&#x53F7;&#xFF0C;&#x8FD8;&#x5B58;&#x653E;&#x4E86;&#x6709;&#x7528;&#x7684;&#x5143;&#x6570;&#x636E;&#x3002;&#x4E0E;&#x5B89;&#x88C5;&#x5173;&#x7CFB;&#x6700;&#x5BC6;&#x5207;&#x7684;&#x662F; source &#x4FE1;&#x606F;&#xFF0C;&#x5B83;&#x7533;&#x660E;&#x4E86;&#x5728;&#x54EA;&#x91CC;&#x53EF;&#x4EE5;&#x83B7;&#x5F97;&#x8D44;&#x6E90;&#x5305;&#x7684;&#x5185;&#x5BB9;&#x3002;&#x5305;&#x6570;&#x636E;&#x6307;&#x5411;&#x5305;&#x5185;&#x5BB9;&#xFF0C;&#x5E76;&#x6709;&#x4E24;&#x79CD;&#x6307;&#x5411;&#x65B9;&#x5F0F;&#xFF1A;dist &#x548C; source&#x3002;</p>
+<p><strong>Dist:</strong> dist &#x6307;&#x5411;&#x4E00;&#x4E2A;&#x5B58;&#x6863;&#xFF0C;&#x8BE5;&#x5B58;&#x6863;&#x662F;&#x5BF9;&#x4E00;&#x4E2A;&#x8D44;&#x6E90;&#x5305;&#x7684;&#x67D0;&#x4E2A;&#x7248;&#x672C;&#x7684;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x7684;&#x6253;&#x5305;&#x3002;&#x901A;&#x5E38;&#x662F;&#x5DF2;&#x7ECF;&#x53D1;&#x884C;&#x7684;&#x7A33;&#x5B9A;&#x7248;&#x672C;&#x3002;</p>
+<p><strong>Source:</strong> source &#x6307;&#x5411;&#x4E00;&#x4E2A;&#x5F00;&#x53D1;&#x4E2D;&#x7684;&#x6E90;&#x3002;&#x8FD9;&#x901A;&#x5E38;&#x662F;&#x4E00;&#x4E2A;&#x6E90;&#x4EE3;&#x7801;&#x4ED3;&#x5E93;&#xFF0C;&#x4F8B;&#x5982; git&#x3002;&#x5F53;&#x4F60;&#x60F3;&#x8981;&#x5BF9;&#x4E0B;&#x8F7D;&#x4E0B;&#x6765;&#x7684;&#x8D44;&#x6E90;&#x5305;&#x8FDB;&#x884C;&#x4FEE;&#x6539;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x83B7;&#x53D6;&#x3002;</p>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5176;&#x4E2D;&#x4EFB;&#x610F;&#x4E00;&#x4E2A;&#xFF0C;&#x6216;&#x8005;&#x540C;&#x65F6;&#x4F7F;&#x7528;&#x3002;&#x8FD9;&#x53D6;&#x51B3;&#x4E8E;&#x5176;&#x5B83;&#x7684;&#x4E00;&#x4E9B;&#x56E0;&#x7D20;&#xFF0C;&#x6BD4;&#x5982;&#x201C;user-supplied &#x9009;&#x9879;&#x201D;&#x548C;&#x201C;&#x5305;&#x7684;&#x7A33;&#x5B9A;&#x6027;&#x201D;&#xFF0C;&#x524D;&#x8005;&#x5C06;&#x4F1A;&#x88AB;&#x4F18;&#x5148;&#x8003;&#x8651;&#x3002;</p>
+<p><a name="Repository"></a></p>
+<h3 id="&#x8D44;&#x6E90;&#x5E93;">&#x8D44;&#x6E90;&#x5E93;</h3>
+<p>&#x4E00;&#x4E2A;&#x8D44;&#x6E90;&#x5E93;&#x662F;&#x4E00;&#x4E2A;&#x5305;&#x7684;&#x6765;&#x6E90;&#x3002;&#x5B83;&#x662F;&#x4E00;&#x4E2A; packages/versions &#x7684;&#x5217;&#x8868;&#x3002;Composer &#x5C06;&#x67E5;&#x770B;&#x6240;&#x6709;&#x4F60;&#x5B9A;&#x4E49;&#x7684; repositories &#x4EE5;&#x627E;&#x5230;&#x4F60;&#x9879;&#x76EE;&#x9700;&#x8981;&#x7684;&#x8D44;&#x6E90;&#x5305;&#x3002;</p>
+<p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#x5DF2;&#x7ECF;&#x5C06; Packagist.org &#x6CE8;&#x518C;&#x5230; Composer&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x5728; <code>composer.json</code> &#x4E2D;&#x7533;&#x660E;&#x66F4;&#x591A;&#x7684;&#x8D44;&#x6E90;&#x5E93;&#xFF0C;&#x628A;&#x5B83;&#x4EEC;&#x52A0;&#x5165;&#x4F60;&#x7684;&#x9879;&#x76EE;&#x4E2D;&#x3002;</p>
+<p>&#x8D44;&#x6E90;&#x5E93;&#x7684;&#x5B9A;&#x4E49;&#x4EC5;&#x53EF;&#x7528;&#x4E8E;&#x201C;root &#x5305;&#x201D;&#xFF0C;&#x800C;&#x5728;&#x4F60;&#x4F9D;&#x8D56;&#x7684;&#x5305;&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x8D44;&#x6E90;&#x5E93;&#x5C06;&#x4E0D;&#x4F1A;&#x88AB;&#x52A0;&#x8F7D;&#x3002;&#x5982;&#x679C;&#x4F60;&#x60F3;&#x4E86;&#x89E3;&#x5176;&#x4E2D;&#x7684;&#x539F;&#x56E0;&#xFF0C;&#x8BF7;&#x9605;&#x8BFB; <a href="faqs/why-can%27t-composer-load-repositories-recursively.md">FAQ entry</a>&#x3002;</p>
+<p><a name="Types"></a></p>
+<h2 id="types">Types</h2>
+<p><a name="Composer"></a></p>
+<h3 id="composer">Composer</h3>
+<p>&#x4E3B;&#x8D44;&#x6E90;&#x5E93;&#x7684;&#x7C7B;&#x578B;&#x4E3A; <code>composer</code>&#x3002;&#x5B83;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x5355;&#x4E00;&#x7684; <code>packages.json</code> &#x6587;&#x4EF6;&#xFF0C;&#x5305;&#x542B;&#x4E86;&#x6240;&#x6709;&#x7684;&#x8D44;&#x6E90;&#x5305;&#x5143;&#x6570;&#x636E;&#x3002;</p>
+<p>&#x8FD9;&#x4E5F;&#x662F; packagist.org &#x6240;&#x4F7F;&#x7528;&#x7684;&#x8D44;&#x6E90;&#x7C7B;&#x578B;&#x3002;&#x8981;&#x5F15;&#x7528;&#x4E00;&#x4E2A; <code>composer</code> &#x8D44;&#x6E90;&#x5E93;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x5B58;&#x653E; <code>packages.json</code> &#x6587;&#x4EF6;&#x7684; <strong>&#x76EE;&#x5F55;&#x8DEF;&#x5F84;</strong>&#x3002;&#x6BD4;&#x5982;&#x8981;&#x5F15;&#x7528; <code>packagist.org</code> &#x4E0B;&#x7684; <code>/packages.json</code>&#xFF0C;&#x5B83;&#x7684; URL &#x5C31;&#x5E94;&#x8BE5;&#x662F; <code>packagist.org</code>&#x3002;&#x800C; <code>example.org/packages.json</code> &#x7684; URL &#x5E94;&#x8BE5;&#x662F; <code>example.org</code>&#x3002;</p>
+<p><a name="packages"></a></p>
+<h4 id="packages">packages</h4>
+<p>&#x552F;&#x4E00;&#x5FC5;&#x987B;&#x7684;&#x5B57;&#x6BB5;&#x662F; <code>packages</code>&#x3002;&#x5B83;&#x7684; JSON &#x7ED3;&#x6784;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;packages&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;vendor/package-name&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;dev-master&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span> @composer.json <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;1.0.x-dev&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span> @composer.json <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;0.0.1&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span> @composer.json <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;1.0.0&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span> @composer.json <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><code>@composer.json</code> &#x6807;&#x8BB0;&#x5C06;&#x4F1A;&#x4ECE;&#x6B64;&#x5305;&#x7684;&#x6307;&#x5B9A;&#x7248;&#x672C;&#x4E2D;&#x8BFB;&#x53D6; <code>composer.json</code> &#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x5176;&#x5185;&#x81F3;&#x5C11;&#x5E94;&#x5305;&#x542B;&#x4EE5;&#x4E0B;&#x4FE1;&#x606F;&#xFF1A;</p>
+<ul>
+<li>name</li>
+<li>version</li>
+<li>dist or source</li>
+</ul>
+<p>&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x6700;&#x7B80;&#x5355;&#x7684;&#x5305;&#x5B9A;&#x4E49;&#xFF1A;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;smarty/smarty&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;version&quot;</span><span class="token operator">:</span> <span class="token string">&quot;3.1.7&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;dist&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://www.smarty.net/files/Smarty-3.1.7.zip&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;zip&quot;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x5B83;&#x8FD8;&#x53EF;&#x4EE5;&#x5305;&#x542B;&#x4EFB;&#x4F55;&#x5728; <a href="04-schema.html">composer.json &#x67B6;&#x6784;</a> &#x4E2D;&#x4ECB;&#x7ECD;&#x7684;&#x5B57;&#x6BB5;&#x3002;</p>
+<p><a name="notify-batch"></a></p>
+<h4 id="notify-batch">notify-batch</h4>
+<p><code>notify-batch</code> &#x5B57;&#x6BB5;&#x5141;&#x8BB8;&#x4F60;&#x6307;&#x5B9A;&#x4E00;&#x4E2A; URL&#xFF0C;&#x5B83;&#x5C06;&#x4F1A;&#x5728;&#x7528;&#x6237;&#x5B89;&#x88C5;&#x6BCF;&#x4E00;&#x4E2A;&#x5305;&#x65F6;&#x88AB;&#x8C03;&#x7528;&#x3002;&#x8BE5; URL &#x53EF;&#x4EE5;&#x662F;&#xFF08;&#x4E0E;&#x5176;&#x8D44;&#x6E90;&#x5E93;&#x76F8;&#x540C;&#x57DF;&#x540D;&#x7684;&#xFF09;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;&#x6216;&#x8005;&#x4E00;&#x4E2A;&#x5B8C;&#x6574;&#x7684; URL &#x5730;&#x5740;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#x4F7F;&#x7528;&#x4E0B;&#x9762;&#x7684;&#x503C;&#xFF1A;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;notify-batch&quot;</span><span class="token operator">:</span> <span class="token string">&quot;/downloads/&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x5BF9;&#x4E8E; <code>example.org/packages.json</code> &#x5305;&#x542B;&#x7684; <code>monolog/monolog</code> &#x5305;&#xFF0C;&#x5B83;&#x5C06;&#x4F1A;&#x53D1;&#x9001;&#x4E00;&#x4E2A; <code>POST</code> &#x8BF7;&#x6C42;&#x5230; <code>example.org/downloads/</code>&#xFF0C;&#x4F7F;&#x7528;&#x4E0B;&#x9762;&#x7684; JSON request body&#xFF1A;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;downloads&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span><span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;monolog/monolog&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;version&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1.2.1.0&quot;</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><code>version</code> &#x5B57;&#x6BB5;&#x5C06;&#x5305;&#x542B;&#x6807;&#x51C6;&#x5316;&#x7684;&#x7248;&#x672C;&#x53F7;&#x3002;</p>
+<p><code>notify-batch</code> &#x5B57;&#x6BB5;&#x662F;&#x53EF;&#x9009;&#x7684;&#x3002;</p>
+<p><a name="includes"></a></p>
+<h4 id="includes">includes</h4>
+<p>&#x5BF9;&#x4E8E;&#x8F83;&#x5927;&#x7684;&#x8D44;&#x6E90;&#x5E93;&#xFF0C;&#x53EF;&#x4EE5;&#x62C6;&#x5206; <code>packages.json</code> &#x4E3A;&#x591A;&#x4E2A;&#x6587;&#x4EF6;&#x3002;<code>includes</code> &#x5B57;&#x6BB5;&#x5141;&#x8BB8;&#x4F60;&#x5F15;&#x7528;&#x8FD9;&#x4E9B;&#x989D;&#x5916;&#x7684;&#x6587;&#x4EF6;&#x3002;</p>
+<p>&#x5B9E;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;includes&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;packages-2011.json&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;sha1&quot;</span><span class="token operator">:</span> <span class="token string">&quot;525a85fb37edd1ad71040d429928c2c0edec9d17&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;packages-2012-01.json&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;sha1&quot;</span><span class="token operator">:</span> <span class="token string">&quot;897cde726f8a3918faf27c803b336da223d400dd&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;packages-2012-02.json&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;sha1&quot;</span><span class="token operator">:</span> <span class="token string">&quot;26f911ad717da26bbcac3f8f435280d13917efa5&quot;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x6587;&#x4EF6;&#x7684; SHA-1 &#x7801;&#x5141;&#x8BB8;&#x5B83;&#x88AB;&#x7F13;&#x5B58;&#xFF0C;&#x4EC5;&#x5728; hash &#x503C;&#x6539;&#x53D8;&#x65F6;&#x91CD;&#x65B0;&#x8BF7;&#x6C42;&#x3002;</p>
+<p>&#x6B64;&#x5B57;&#x6BB5;&#x662F;&#x53EF;&#x9009;&#x7684;&#x3002;&#x4F60;&#x4E5F;&#x8BB8;&#x5E76;&#x4E0D;&#x9700;&#x8981;&#x5B83;&#x6765;&#x81EA;&#x5B9A;&#x4E49;&#x5B58;&#x50A8;&#x5E93;&#x3002;</p>
+<p><a name="provider-includes"></a></p>
+<h4 id="provider-includes-and-providers-url">provider-includes and providers-url</h4>
+<p>&#x7684;&#x5BF9;&#x4E8E;&#x975E;&#x5E38;&#x5927;&#x7684;&#x8D44;&#x6E90;&#x5E93;&#xFF0C;&#x50CF; packagist.org &#x4F7F;&#x7528; so-called provider &#x6587;&#x4EF6;&#x662F;&#x9996;&#x9009;&#x65B9;&#x6CD5;&#x3002;<code>provider-includes</code> &#x5B57;&#x6BB5;&#x5141;&#x8BB8;&#x4F60;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#xFF0C;&#x6765;&#x7533;&#x660E;&#x8FD9;&#x4E2A;&#x8D44;&#x6E90;&#x5E93;&#x63D0;&#x4F9B;&#x7684;&#x5305;&#x540D;&#x79F0;&#x3002;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#x6587;&#x4EF6;&#x7684;&#x54C8;&#x5E0C;&#x7B97;&#x6CD5;&#x5FC5;&#x987B;&#x4F7F;&#x7528; sha256&#x3002;</p>
+<p><code>providers-url</code> &#x63CF;&#x8FF0;&#x4E86;&#x5982;&#x4F55;&#x5728;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x627E;&#x5230;&#x8FD9;&#x4E9B; provider &#x6587;&#x4EF6;&#x3002;&#x5B83;&#x662F;&#x4EE5;&#x8D44;&#x6E90;&#x5E93;&#x7684;&#x6839;&#x76EE;&#x5F55;&#x4E3A;&#x8D77;&#x70B9;&#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;&#x3002;</p>
+<p>&#x5B9E;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;provider-includes&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;providers-a.json&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;sha256&quot;</span><span class="token operator">:</span> <span class="token string">&quot;f5b4bc0b354108ef08614e569c1ed01a2782e67641744864a74e788982886f4c&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;providers-b.json&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;sha256&quot;</span><span class="token operator">:</span> <span class="token string">&quot;b38372163fac0573053536f5b8ef11b86f804ea8b016d239e706191203f6efac&quot;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;providers-url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;/p/%package%$%hash%.json&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x8FD9;&#x4E9B;&#x6587;&#x4EF6;&#x5305;&#x542B;&#x8D44;&#x6E90;&#x5305;&#x7684;&#x540D;&#x79F0;&#x4EE5;&#x53CA;&#x54C8;&#x5E0C;&#x503C;&#xFF0C;&#x4EE5;&#x9A8C;&#x8BC1;&#x6587;&#x4EF6;&#x7684;&#x5B8C;&#x6574;&#x6027;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;providers&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;acme/foo&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;sha256&quot;</span><span class="token operator">:</span> <span class="token string">&quot;38968de1305c2e17f4de33aea164515bc787c42c7e2d6e25948539a14268bb82&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;acme/bar&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;sha256&quot;</span><span class="token operator">:</span> <span class="token string">&quot;4dd24c930bd6e1103251306d6336ac813b563a220d9ca14f4743c032fb047233&quot;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x4E0A;&#x8FF0;&#x6587;&#x4EF6;&#x7533;&#x660E;&#x4E86; <code>acme/foo</code> &#x548C; <code>acme/bar</code> &#x53EF;&#x4EE5;&#x5728;&#x8FD9;&#x4E2A;&#x8D44;&#x6E90;&#x5E93;&#x627E;&#x5230;&#xFF0C;&#x901A;&#x8FC7;&#x52A0;&#x8F7D;&#x7531; <code>providers-url</code> &#x5F15;&#x7528;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x66FF;&#x6362; <code>%package%</code> &#x4E3A;&#x5305;&#x540D;&#x5E76;&#x4E14;&#x66FF;&#x6362; <code>%hash%</code> &#x4E3A; sha256 &#x7684;&#x503C;&#x3002;&#x8FD9;&#x4E9B;&#x6587;&#x4EF6;&#x672C;&#x8EAB;&#x53EA;&#x5305;&#x542B;&#x4E0A;&#x6587;&#x63D0;&#x5230;&#x7684; <a href="#packages">packages</a> &#x7684;&#x5B9A;&#x4E49;&#x3002;</p>
+<p>&#x8FD9;&#x4E9B;&#x5B57;&#x6BB5;&#x662F;&#x53EF;&#x9009;&#x7684;&#x3002;&#x4F60;&#x4E5F;&#x8BB8;&#x5E76;&#x4E0D;&#x9700;&#x8981;&#x5B83;&#x4EEC;&#x6765;&#x81EA;&#x5B9A;&#x4E49;&#x5B58;&#x50A8;&#x5E93;&#x3002;</p>
+<p><a name="stream-options"></a></p>
+<h4 id="stream-options">stream options</h4>
+<p><code>packages.json</code> &#x6587;&#x4EF6;&#x662F;&#x7528;&#x4E00;&#x4E2A; PHP &#x6D41;&#x52A0;&#x8F7D;&#x7684;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>options</code> &#x53C2;&#x6570;&#x6765;&#x8BBE;&#x5B9A;&#x989D;&#x5916;&#x7684;&#x6D41;&#x4FE1;&#x606F;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x4EFB;&#x4F55;&#x6709;&#x6548;&#x7684;PHP &#x6D41;&#x4E0A;&#x4E0B;&#x6587;&#x9009;&#x9879;&#x3002;&#x66F4;&#x591A;&#x76F8;&#x5173;&#x4FE1;&#x606F;&#x8BF7;&#x67E5;&#x770B; <a href="http://php.net/manual/en/context.php" target="_blank">Context options and parameters</a>&#x3002;</p>
+<p><a name="VCS"></a></p>
+<h3 id="vcs">VCS</h3>
+<p>VCS &#x8868;&#x793A;&#x7248;&#x672C;&#x63A7;&#x5236;&#x7CFB;&#x7EDF;&#x3002;&#x8FD9;&#x5305;&#x62EC;&#x50CF; git&#x3001;svn &#x6216; hg &#x8FD9;&#x6837;&#x7684;&#x7248;&#x672C;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x3002;Composer &#x6709;&#x4E00;&#x4E2A;&#x8D44;&#x6E90;&#x7C7B;&#x578B;&#x53EF;&#x4EE5;&#x4ECE;&#x8FD9;&#x4E9B;&#x7CFB;&#x7EDF;&#x5B89;&#x88C5;&#x8F6F;&#x4EF6;&#x5305;&#x3002;</p>
+<p><a name="from-a-VCS"></a></p>
+<h4 id="&#x4ECE;-vcs-&#x8D44;&#x6E90;&#x5E93;&#x52A0;&#x8F7D;&#x4E00;&#x4E2A;&#x5305;">&#x4ECE; VCS &#x8D44;&#x6E90;&#x5E93;&#x52A0;&#x8F7D;&#x4E00;&#x4E2A;&#x5305;</h4>
+<p>&#x8FD9;&#x91CC;&#x6709;&#x51E0;&#x4E2A;&#x7528;&#x4F8B;&#x3002;&#x6700;&#x5E38;&#x89C1;&#x7684;&#x662F;&#x7EF4;&#x62A4;&#x81EA;&#x5DF1; fork &#x7684;&#x7B2C;&#x4E09;&#x65B9;&#x5E93;&#x3002;&#x5982;&#x679C;&#x4F60;&#x5728;&#x9879;&#x76EE;&#x4E2D;&#x4F7F;&#x7528;&#x67D0;&#x4E9B;&#x5E93;&#xFF0C;&#x5E76;&#x4E14;&#x4F60;&#x51B3;&#x5B9A;&#x6539;&#x53D8;&#x8FD9;&#x4E9B;&#x5E93;&#x5185;&#x7684;&#x67D0;&#x4E9B;&#x4E1C;&#x897F;&#xFF0C;&#x4F60;&#x4F1A;&#x5E0C;&#x671B;&#x4F60;&#x9879;&#x76EE;&#x4E2D;&#x4F7F;&#x7528;&#x7684;&#x662F;&#x4F60;&#x81EA;&#x5DF1;&#x7684;&#x4FEE;&#x6B63;&#x7248;&#x672C;&#x3002;&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x5E93;&#x662F;&#x5728; GitHub &#x4E0A;&#xFF08;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x7ECF;&#x5E38;&#x51FA;&#x73B0;&#xFF09;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x7B80;&#x5355;&#x7684; fork &#x5B83;&#x5E76; push &#x4F60;&#x7684;&#x53D8;&#x66F4;&#x5230;&#x8FD9;&#x4E2A; fork &#x91CC;&#x3002;&#x5728;&#x8FD9;&#x4E4B;&#x540E;&#x4F60;&#x66F4;&#x65B0;&#x9879;&#x76EE;&#x7684; <code>composer.json</code> &#x6587;&#x4EF6;&#xFF0C;&#x6DFB;&#x52A0;&#x4F60;&#x7684; fork &#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x8D44;&#x6E90;&#x5E93;&#xFF0C;&#x53D8;&#x66F4;&#x7248;&#x672C;&#x7EA6;&#x675F;&#x6765;&#x6307;&#x5411;&#x4F60;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x5206;&#x652F;&#x3002;&#x5173;&#x4E8E;&#x7248;&#x672C;&#x7EA6;&#x675F;&#x7684;&#x547D;&#x540D;&#x7EA6;&#x5B9A;&#x8BF7;&#x67E5;&#x770B; <a href="02-libraries.html">&#x5E93;&#xFF08;&#x8D44;&#x6E90;&#x5305;&#xFF09;</a>&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF0C;&#x5047;&#x8BBE;&#x4F60; fork &#x4E86; monolog&#xFF0C;&#x5728; <code>bugfix</code> &#x5206;&#x652F;&#x4FEE;&#x590D;&#x4E86;&#x4E00;&#x4E2A; bug&#xFF1A;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;repositories&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;vcs&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;https://github.com/igorw/monolog&quot;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;require&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;monolog/monolog&quot;</span><span class="token operator">:</span> <span class="token string">&quot;dev-bugfix&quot;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x5F53;&#x4F60;&#x8FD0;&#x884C; <code>php composer.phar update</code> &#x65F6;&#xFF0C;&#x4F60;&#x5E94;&#x8BE5;&#x5F97;&#x5230;&#x4F60;&#x4FEE;&#x6539;&#x7684;&#x7248;&#x672C;&#xFF0C;&#x800C;&#x4E0D;&#x662F; packagist.org &#x4E0A;&#x7684; <code>monolog/monolog</code>&#x3002;</p>
+<p>&#x6CE8;&#x610F;&#xFF0C;&#x4F60;&#x4E0D;&#x5E94;&#x8BE5;&#x5BF9;&#x5305;&#x8FDB;&#x884C;&#x91CD;&#x547D;&#x540D;&#xFF0C;&#x9664;&#x975E;&#x4F60;&#x771F;&#x7684;&#x6253;&#x7B97;&#x6446;&#x8131;&#x539F;&#x6765;&#x7684;&#x5305;&#xFF0C;&#x5E76;&#x957F;&#x671F;&#x7684;&#x4F7F;&#x7528;&#x4F60;&#x81EA;&#x5DF1;&#x7684; fork&#x3002;&#x8FD9;&#x6837; Composer &#x5C31;&#x4F1A;&#x6B63;&#x786E;&#x83B7;&#x53D6;&#x4F60;&#x7684;&#x5305;&#x4E86;&#x3002;&#x5982;&#x679C;&#x4F60;&#x786E;&#x5B9A;&#x8981;&#x91CD;&#x547D;&#x540D;&#x8FD9;&#x4E2A;&#x5305;&#xFF0C;&#x4F60;&#x5E94;&#x8BE5;&#x5728;&#x9ED8;&#x8BA4;&#x5206;&#x652F;&#xFF08;&#x901A;&#x5E38;&#x662F; master &#x5206;&#x652F;&#xFF09;&#x4E0A;&#x64CD;&#x4F5C;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x7279;&#x6027;&#x5206;&#x652F;&#xFF0C;&#x56E0;&#x4E3A;&#x5305;&#x7684;&#x540D;&#x5B57;&#x53D6;&#x81EA;&#x9ED8;&#x8BA4;&#x5206;&#x652F;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x5176;&#x5B83;&#x5305;&#x4F9D;&#x8D56;&#x4F60; fork &#x7684;&#x8FD9;&#x4E2A;&#x5206;&#x652F;&#xFF0C;&#x53EF;&#x80FD;&#x8981;&#x5BF9;&#x5B83;&#x505A;&#x7248;&#x672C;&#x53F7;&#x7684;&#x884C;&#x5185;&#x522B;&#x540D;&#x8BBE;&#x7F6E;&#xFF0C;&#x624D;&#x80FD;&#x591F;&#x51C6;&#x786E;&#x7684;&#x8BC6;&#x522B;&#x7248;&#x672C;&#x7EA6;&#x675F;&#x3002;&#x66F4;&#x591A;&#x76F8;&#x5173;&#x4FE1;&#x606F;&#x8BF7;&#x67E5;&#x770B; <a href="articles/aliases.html">&#x522B;&#x540D;</a>&#x3002;</p>
+<p><a name="Using-private"></a></p>
+<h4 id="&#x4F7F;&#x7528;&#x79C1;&#x6709;&#x8D44;&#x6E90;&#x5E93;">&#x4F7F;&#x7528;&#x79C1;&#x6709;&#x8D44;&#x6E90;&#x5E93;</h4>
+<p>&#x5B8C;&#x5168;&#x76F8;&#x540C;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x8BA9;&#x4F60;&#x4F7F;&#x7528;&#x4F60; GitHub &#x548C; BitBucket &#x4E0A;&#x7684;&#x79C1;&#x4EBA;&#x4EE3;&#x7801;&#x5E93;&#x8FDB;&#x884C;&#x5DE5;&#x4F5C;&#xFF1A;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;require&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;vendor/my-private-repo&quot;</span><span class="token operator">:</span> <span class="token string">&quot;dev-master&quot;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;repositories&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;vcs&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;url&quot;</span><span class="token operator">:</span>  <span class="token string">&quot;git@bitbucket.org:vendor/my-private-repo.git&quot;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x552F;&#x4E00;&#x7684;&#x8981;&#x6C42;&#x662F;&#x4E3A;&#x4E00;&#x4E2A; git &#x5BA2;&#x6237;&#x7AEF;&#x5B89;&#x88C5; SSH &#x79D8;&#x94A5;&#x3002;</p>
+<p><a name="Git-alternatives"></a></p>
+<h4 id="git-&#x7684;&#x5907;&#x9009;&#x65B9;&#x6848;">Git &#x7684;&#x5907;&#x9009;&#x65B9;&#x6848;</h4>
+<p>Git &#x5E76;&#x4E0D;&#x662F; VCS &#x8D44;&#x6E90;&#x5E93;&#x552F;&#x4E00;&#x652F;&#x6301;&#x7684;&#x7248;&#x672C;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x3002;</p>
+<p>&#x4EE5;&#x4E0B;&#x51E0;&#x79CD;&#x90FD;&#x662F;&#x88AB;&#x652F;&#x6301;&#x7684;&#xFF1A;</p>
+<ul>
+<li><strong>Git:</strong> <a href="http://git-scm.com" target="_blank">git-scm.com</a></li>
+<li><strong>Subversion:</strong> <a href="http://subversion.apache.org" target="_blank">subversion.apache.org</a></li>
+<li><strong>Mercurial:</strong> <a href="http://mercurial.selenic.com" target="_blank">mercurial.selenic.com</a></li>
+</ul>
+<p>&#x4E3A;&#x4E86;&#x4ECE;&#x8FD9;&#x4E9B;&#x7CFB;&#x7EDF;&#x83B7;&#x53D6;&#x8D44;&#x6E90;&#x5305;&#xFF0C;&#x4F60;&#x5FC5;&#x987B;&#x5B89;&#x88C5;&#x5BF9;&#x5E94;&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x8FD9;&#x53EF;&#x80FD;&#x662F;&#x4E0D;&#x65B9;&#x4FBF;&#x7684;&#x3002;&#x57FA;&#x4E8E;&#x8FD9;&#x4E2A;&#x539F;&#x56E0;&#xFF0C;&#x8FD9;&#x91CC;&#x63D0;&#x4F9B;&#x4E86; GitHub &#x548C; BitBucket &#x7684; API &#x7684;&#x7279;&#x6B8A;&#x652F;&#x6301;&#xFF0C;&#x4EE5;&#x4FBF;&#x5728;&#x65E0;&#x9700;&#x5B89;&#x88C5;&#x7248;&#x672C;&#x63A7;&#x5236;&#x7CFB;&#x7EDF;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x83B7;&#x53D6;&#x8D44;&#x6E90;&#x5305;&#x3002;&#x5728; VCS &#x8D44;&#x6E90;&#x5E93;&#x63D0;&#x4F9B;&#x7684; <code>dist</code> &#x4E2D;&#x83B7;&#x53D6; zip &#x5B58;&#x6863;&#x3002;</p>
+<ul>
+<li><strong>GitHub:</strong> <a href="https://github.com" target="_blank">github.com</a> (Git)</li>
+<li><strong>BitBucket:</strong> <a href="https://bitbucket.org" target="_blank">bitbucket.org</a> (Git and Mercurial)</li>
+</ul>
+<p>VCS &#x9A71;&#x52A8;&#x5C06;&#x57FA;&#x4E8E; URL &#x81EA;&#x52A8;&#x68C0;&#x6D4B;&#x7248;&#x672C;&#x5E93;&#x7C7B;&#x578B;&#x3002;&#x4F46;&#x5982;&#x679C;&#x53EF;&#x80FD;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x660E;&#x786E;&#x7684;&#x6307;&#x5B9A;&#x4E00;&#x4E2A; <code>git</code>&#x3001;<code>svn</code> &#x6216; <code>hg</code> &#x4F5C;&#x4E3A;&#x8D44;&#x6E90;&#x5E93;&#x7C7B;&#x578B;&#xFF0C;&#x800C;&#x4E0D;&#x662F; <code>vcs</code>&#x3002;</p>
+<p>If you set the <code>no-api</code> key to <code>true</code> on a github repository it will clone the
+repository as it would with any other git repository instead of using the
+GitHub API. But unlike using the <code>git</code> driver directly, composer will still
+attempt to use github&apos;s zip files.</p>
+<p><a name="Subversion-Options"></a></p>
+<h4 id="subversion-&#x9009;&#x9879;">Subversion &#x9009;&#x9879;</h4>
+<p>&#x7531;&#x4E8E; Subversion &#x6CA1;&#x6709;&#x539F;&#x751F;&#x7684;&#x5206;&#x652F;&#x548C;&#x6807;&#x7B7E;&#x7684;&#x6982;&#x5FF5;&#xFF0C;Composer &#x5047;&#x8BBE;&#x5728;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#x8BE5;&#x4EE3;&#x7801;&#x4F4D;&#x4E8E; <code>$url/trunk</code>&#x3001;<code>$url/branches</code> &#x548C; <code>$url/tags</code> &#x5185;&#x3002;&#x5982;&#x679C;&#x4F60;&#x7684;&#x5B58;&#x50A8;&#x5E93;&#x4F7F;&#x7528;&#x4E86;&#x4E0D;&#x540C;&#x7684;&#x5E03;&#x5C40;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x66F4;&#x6539;&#x8FD9;&#x4E9B;&#x503C;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x4F7F;&#x7528;&#x5927;&#x5199;&#x7684;&#x540D;&#x79F0;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x50CF;&#x8FD9;&#x6837;&#x914D;&#x7F6E;&#x8D44;&#x6E90;&#x5E93;&#xFF1A;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;repositories&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;vcs&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://svn.example.org/projectA/&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;trunk-path&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Trunk&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;branches-path&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Branches&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;tags-path&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Tags&quot;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x5982;&#x679C;&#x4F60;&#x7684;&#x5B58;&#x50A8;&#x5E93;&#x76EE;&#x5F55;&#x4E2D;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x5206;&#x652F;&#x6216;&#x6807;&#x7B7E;&#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5C06; <code>branches-path</code> &#x6216; <code>tags-path</code> &#x8BBE;&#x7F6E;&#x4E3A; <code>false</code>&#x3002;</p>
+<p>&#x5982;&#x679C;&#x662F;&#x4E00;&#x4E2A;&#x4F4D;&#x4E8E;&#x5B50;&#x76EE;&#x5F55;&#x7684;&#x5305;&#xFF0C;&#x4F8B;&#x5982;&#xFF0C; <code>/trunk/foo/bar/composer.json</code> &#x548C; <code>/tags/1.0/foo/bar/composer.json</code>&#xFF0C;&#x90A3;&#x4E48;&#x4F60;&#x53EF;&#x4EE5;&#x8BA9; composer &#x901A;&#x8FC7; <code>&quot;package-path&quot;</code> &#x9009;&#x9879;&#x8BBE;&#x7F6E;&#x7684;&#x5B50;&#x76EE;&#x5F55;&#x8FDB;&#x884C;&#x8BBF;&#x95EE;&#xFF0C;&#x5728;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x4E2D;&#x53EF;&#x4EE5;&#x5C06;&#x5176;&#x8BBE;&#x7F6E;&#x4E3A; <code>&quot;package-path&quot;: &quot;foo/bar/&quot;</code>&#x3002;</p>
+<p><a name="PEAR"></a></p>
+<h3 id="pear">PEAR</h3>
+<p><code>pear</code> &#x7C7B;&#x578B;&#x8D44;&#x6E90;&#x5E93;&#xFF0C;&#x4F7F;&#x5F97;&#x4ECE;&#x4EFB;&#x4F55; PEAR &#x6E20;&#x9053;&#x5B89;&#x88C5;&#x8D44;&#x6E90;&#x5305;&#x6210;&#x4E3A;&#x53EF;&#x80FD;&#x3002;Composer &#x5C06;&#x4E3A;&#x6240;&#x6709;&#x6B64;&#x7C7B;&#x578B;&#x7684;&#x5305;&#x589E;&#x52A0;&#x524D;&#x7F00;&#xFF08;&#x7C7B;&#x4F3C;&#x4E8E; <code>pear-{&#x6E20;&#x9053;&#x540D;&#x79F0;}/</code>&#xFF09;&#x4EE5;&#x907F;&#x514D;&#x51B2;&#x7A81;&#x3002;&#x800C;&#x5728;&#x4E4B;&#x540E;&#x4F7F;&#x7528;&#x522B;&#x540D;&#x65F6;&#x4E5F;&#x589E;&#x52A0;&#x524D;&#x7F00;&#xFF08;&#x5982; <code>pear-{&#x6E20;&#x9053;&#x522B;&#x540D;}/</code>&#xFF09;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#x4F7F;&#x7528; <code>pear2.php.net</code>&#xFF1A;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;repositories&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;pear&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://pear2.php.net&quot;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;require&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;pear-pear2.php.net/PEAR2_Text_Markdown&quot;</span><span class="token operator">:</span> <span class="token string">&quot;*&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;pear-pear2/PEAR2_HTTP_Request&quot;</span><span class="token operator">:</span> <span class="token string">&quot;*&quot;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#x6E20;&#x9053;&#x7684;&#x7B80;&#x79F0;&#xFF08;&#x522B;&#x540D;&#xFF09;&#x662F; <code>pear2</code>&#xFF0C;&#x56E0;&#x6B64; <code>PEAR2_HTTP_Request</code> &#x5305;&#x7684;&#x540D;&#x79F0;&#x5E94;&#x8BE5;&#x5199;&#x4F5C; <code>pear-pear2/PEAR2_HTTP_Request</code>&#x3002;</p>
+<blockquote>
+<p><strong>&#x6CE8;&#x610F;&#xFF1A;</strong> <code>pear</code> &#x7C7B;&#x578B;&#x7684;&#x8D44;&#x6E90;&#x5E93;&#x5BF9;&#x6BCF;&#x4E2A; requires &#x90FD;&#x8981;&#x505A;&#x5B8C;&#x6574;&#x7684;&#x8BF7;&#x6C42;&#xFF0C;&#x56E0;&#x6B64;&#x53EF;&#x80FD;&#x5927;&#x5927;&#x964D;&#x4F4E;&#x5B89;&#x88C5;&#x901F;&#x5EA6;&#x3002;</p>
+</blockquote>
+<p><a name="Custom-vendor-alias"></a></p>
+<h4 id="&#x81EA;&#x5B9A;&#x4E49;&#x4F9B;&#x5E94;&#x5546;&#x522B;&#x540D;">&#x81EA;&#x5B9A;&#x4E49;&#x4F9B;&#x5E94;&#x5546;&#x522B;&#x540D;</h4>
+<p>&#x901A;&#x8FC7;&#x81EA;&#x5B9A;&#x4E49;&#x4F9B;&#x5E94;&#x5546;&#x540D;&#x79F0;&#xFF0C;&#x5BF9; PEAR &#x6E20;&#x9053;&#x5305;&#x8FDB;&#x884C;&#x522B;&#x540D;&#x662F;&#x5141;&#x8BB8;&#x7684;&#x3002;</p>
+<p>&#x4F8B;&#xFF1A;</p>
+<p>&#x5047;&#x8BBE;&#x4F60;&#x6709;&#x4E00;&#x4E2A;&#x79C1;&#x4EBA; PEAR &#x5E93;&#xFF0C;&#x5E76;&#x5E0C;&#x671B;&#x4F7F;&#x7528; Composer &#x4ECE; VCS &#x96C6;&#x6210;&#x4F9D;&#x8D56;&#x3002;&#x4F60;&#x7684; PEAR &#x5E93;&#x5305;&#x542B;&#x4EE5;&#x4E0B;&#x8D44;&#x6E90;&#x5305;&#xFF1A;</p>
+<ul>
+<li><code>BasePackage</code>&#x3002;</li>
+<li><code>IntermediatePackage</code> &#x4F9D;&#x8D56;&#x4E8E; <code>BasePackage</code>&#x3002;</li>
+<li><code>TopLevelPackage1</code> &#x548C; <code>TopLevelPackage2</code> &#x90FD;&#x4F9D;&#x8D56;&#x4E8E; <code>IntermediatePackage</code>&#x3002;</li>
+</ul>
+<p>&#x5982;&#x679C;&#x6CA1;&#x6709;&#x4E00;&#x4E2A;&#x4F9B;&#x5E94;&#x5546;&#x522B;&#x540D;&#xFF0C;Composer &#x5C06;&#x4F7F;&#x7528; PEAR &#x6E20;&#x9053;&#x540D;&#x79F0;&#x4F5C;&#x4E3A;&#x5305;&#x540D;&#x7684;&#x4E00;&#x90E8;&#x5206;&#xFF1A;</p>
+<ul>
+<li><code>pear-pear.foobar.repo/BasePackage</code></li>
+<li><code>pear-pear.foobar.repo/IntermediatePackage</code></li>
+<li><code>pear-pear.foobar.repo/TopLevelPackage1</code></li>
+<li><code>pear-pear.foobar.repo/TopLevelPackage2</code></li>
+</ul>
+<p>&#x5047;&#x8BBE;&#x4E4B;&#x540E;&#x7684;&#x67D0;&#x4E2A;&#x65F6;&#x95F4;&#xFF0C;&#x4F60;&#x5E0C;&#x671B;&#x5C06;&#x4F60;&#x7684; PEAR &#x5305;&#x8FC1;&#x79FB;&#xFF0C;&#x4F7F;&#x7528; Composer &#x8D44;&#x6E90;&#x5E93;&#x548C;&#x547D;&#x540D;&#x65B9;&#x6848;&#xFF0C;&#x5E76;&#x4E14;&#x91C7;&#x7528; <code>foobar</code> &#x4F5C;&#x4E3A;&#x4F9B;&#x5E94;&#x5546;&#x540D;&#x79F0;&#x3002;&#x8FD9;&#x6837;&#x4E4B;&#x524D;&#x4F7F;&#x7528; PEAR &#x5305;&#x7684;&#x9879;&#x76EE;&#x5C06;&#x4E0D;&#x4F1A;&#x770B;&#x5230;&#x66F4;&#x65B0;&#x7684;&#x8D44;&#x6E90;&#x5305;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x4EEC;&#x6709;&#x4E0D;&#x540C;&#x7684;&#x4F9B;&#x5E94;&#x5546;&#x540D;&#x79F0;&#xFF08;<code>foobar/IntermediatePackage</code> &#x4E0E; <code>pear-pear.foobar.repo/IntermediatePackage</code>&#xFF09;&#x3002;</p>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4ECE;&#x4E00;&#x5F00;&#x59CB;&#x5C31;&#x4E3A; PEAR &#x8D44;&#x6E90;&#x5E93;&#x6307;&#x5B9A; <code>vendor-alias</code> &#x6765;&#x907F;&#x514D;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x7684;&#x53D1;&#x751F;&#xFF0C;&#x4EE5;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x4E0D;&#x4F1A;&#x8FC7;&#x65F6;&#x7684;&#x5305;&#x540D;&#x3002;</p>
+<p>&#x4E3A;&#x4E86;&#x8BF4;&#x660E;&#x8FD9;&#x4E00;&#x70B9;&#xFF0C;&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x4F1A;&#x4ECE;&#x4F60;&#x7684; PEAR &#x8D44;&#x6E90;&#x5E93;&#x4E2D;&#x5F97;&#x5230; <code>BasePackage</code>&#x3001;<code>TopLevelPackage1</code> &#x548C; <code>TopLevelPackage2</code> &#x8D44;&#x6E90;&#x5305;&#xFF0C;&#x5E76;&#x4ECE; Github &#x8D44;&#x6E90;&#x5E93;&#x4E2D;&#x83B7;&#x53D6; <code>IntermediatePackage</code> &#x8D44;&#x6E90;&#x5305;&#xFF1A;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;repositories&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;git&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;https://github.com/foobar/intermediate.git&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;pear&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://pear.foobar.repo&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;vendor-alias&quot;</span><span class="token operator">:</span> <span class="token string">&quot;foobar&quot;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;require&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;foobar/TopLevelPackage1&quot;</span><span class="token operator">:</span> <span class="token string">&quot;*&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;foobar/TopLevelPackage2&quot;</span><span class="token operator">:</span> <span class="token string">&quot;*&quot;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><a name="Package"></a></p>
+<h3 id="package">Package</h3>
+<p>&#x5982;&#x679C;&#x4F60;&#x60F3;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x9879;&#x76EE;&#xFF0C;&#x5B83;&#x65E0;&#x6CD5;&#x901A;&#x8FC7;&#x4E0A;&#x8FF0;&#x4EFB;&#x4F55;&#x4E00;&#x79CD;&#x65B9;&#x5F0F;&#x652F;&#x6301; composer&#xFF0C;&#x4F60;&#x4ECD;&#x7136;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>package</code> &#x7C7B;&#x578B;&#x5B9A;&#x4E49;&#x8D44;&#x6E90;&#x5E93;&#x3002;</p>
+<p>&#x57FA;&#x672C;&#x4E0A;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x4E0E; <code>packages.json</code> &#x4E2D; <code>composer</code> &#x7C7B;&#x578B;&#x8D44;&#x6E90;&#x5E93;&#x76F8;&#x540C;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x4F46;&#x9700;&#x8981;&#x4E3A;&#x6BCF;&#x4E2A;&#x8FD9;&#x6837;&#x7684;&#x8D44;&#x6E90;&#x5305;&#x5206;&#x522B;&#x5B9A;&#x4E49;&#x3002;&#x540C;&#x6837;&#xFF0C;&#x81F3;&#x5C11;&#x5E94;&#x8BE5;&#x5305;&#x542B;&#x4EE5;&#x4E0B;&#x4FE1;&#x606F;&#xFF1A;<code>name</code>&#x3001;<code>version</code>&#x3001;&#xFF08;<code>dist</code> &#x6216; <code>source</code>&#xFF09;&#x3002;</p>
+<p>&#x8FD9;&#x662F;&#x4E00;&#x4E2A; smarty &#x6A21;&#x677F;&#x5F15;&#x64CE;&#x7684;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;repositories&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;package&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;package&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;smarty/smarty&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;version&quot;</span><span class="token operator">:</span> <span class="token string">&quot;3.1.7&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;dist&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://www.smarty.net/files/Smarty-3.1.7.zip&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;zip&quot;</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;source&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://smarty-php.googlecode.com/svn/&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;svn&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;reference&quot;</span><span class="token operator">:</span> <span class="token string">&quot;tags/Smarty_3_1_7/distribution/&quot;</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;autoload&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;classmap&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;libs/&quot;</span><span class="token punctuation">]</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;require&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;smarty/smarty&quot;</span><span class="token operator">:</span> <span class="token string">&quot;3.1.*&quot;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x901A;&#x5E38;&#x4F60;&#x4E0D;&#x9700;&#x8981;&#x53BB;&#x5B9A;&#x4E49; <code>source</code>&#xFF0C;&#x56E0;&#x4E3A;&#x4F60;&#x5E76;&#x4E0D;&#x662F;&#x771F;&#x7684;&#x9700;&#x8981;&#x5B83;&#x3002;</p>
+<blockquote>
+<p><strong>&#x6CE8;&#x610F;&#xFF1A;</strong> &#x8BE5;&#x8D44;&#x6E90;&#x5E93;&#x7C7B;&#x578B;&#x5B58;&#x5728;&#x4EE5;&#x4E0B;&#x9650;&#x5236;&#xFF0C;&#x56E0;&#x6B64;&#x5E94;&#x5C3D;&#x53EF;&#x80FD;&#x907F;&#x514D;&#x4F7F;&#x7528;&#xFF1A;</p>
+<ul>
+<li>Composer &#x5C06;&#x4E0D;&#x4F1A;&#x66F4;&#x65B0;&#x8D44;&#x6E90;&#x5305;&#xFF0C;&#x9664;&#x975E;&#x4F60;&#x4FEE;&#x6539;&#x4E86; <code>version</code> &#x5B57;&#x6BB5;&#x3002;</li>
+<li>Composer &#x5C06;&#x4E0D;&#x4F1A;&#x66F4;&#x65B0; commit references&#xFF0C;&#x56E0;&#x6B64;&#x5982;&#x679C;&#x4F60;&#x4F7F;&#x7528; <code>master</code> reference&#xFF0C;&#x5C06;&#x4E0D;&#x5F97;&#x4E0D;&#x5220;&#x9664;&#x8BE5;&#x7A0B;&#x5E8F;&#x5305;&#x4EE5;&#x5F3A;&#x5236;&#x66F4;&#x65B0;&#xFF0C;&#x5E76;&#x4E14;&#x5C06;&#x4E0D;&#x5F97;&#x4E0D;&#x9762;&#x5BF9;&#x4E00;&#x4E2A;&#x4E0D;&#x7A33;&#x5B9A;&#x7684; lock &#x6587;&#x4EF6;&#x3002;</li>
+</ul>
+</blockquote>
+<p><a name="Hosting-your-own"></a></p>
+<h2 id="hosting-your-own">Hosting your own</h2>
+<p>&#x5C3D;&#x7BA1;&#x5927;&#x90E8;&#x5206;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x4F60;&#x5927;&#x6982;&#x90FD;&#x4F1A;&#x628A;&#x8D44;&#x6E90;&#x5305;&#x653E;&#x5728; packagist.org &#x4E0A;&#xFF0C;&#x4F46;&#x8FD9;&#x91CC;&#x8FD8;&#x5C06;&#x544A;&#x8BC9;&#x4F60;&#x4E00;&#x4E9B;&#x7528;&#x4F8B;&#xFF0C;&#x4EE5;&#x4FBF;&#x4F60;&#x53EF;&#x4EE5;&#x81EA;&#x884C;&#x6258;&#x7BA1;&#x8D44;&#x6E90;&#x5E93;&#x3002;</p>
+<ul>
+<li><p><strong>Private company packages:</strong> &#x5982;&#x679C;&#x4F60;&#x662F;&#x4E00;&#x4E2A;&#x516C;&#x53F8;&#x7684;&#x804C;&#x5458;&#xFF0C;&#x5BF9;&#x516C;&#x53F8;&#x5185;&#x90E8;&#x7684;&#x8D44;&#x6E90;&#x5305;&#x4F7F;&#x7528; composer&#xFF0C;&#x4F60;&#x53EF;&#x80FD;&#x4F1A;&#x60F3;&#x8BA9;&#x8FD9;&#x4E9B;&#x5305;&#x4FDD;&#x6301;&#x79C1;&#x6709;&#x7684;&#x72B6;&#x6001;&#x3002;</p>
+</li>
+<li><p><strong>Separate ecosystem:</strong> &#x5982;&#x679C;&#x4F60;&#x7684;&#x9879;&#x76EE;&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x751F;&#x6001;&#x7CFB;&#x7EDF;&#xFF0C;&#x5E76;&#x4E14;&#x81EA;&#x5DF1;&#x7684;&#x8D44;&#x6E90;&#x5305;&#x4E0D;&#x9700;&#x8981;&#x88AB;&#x5176;&#x5B83;&#x9879;&#x76EE;&#x6240;&#x590D;&#x7528;&#xFF0C;&#x4F60;&#x53EF;&#x80FD;&#x4F1A;&#x60F3;&#x5C06;&#x5B83;&#x4EEC;&#x4ECE; packagist.org &#x4E0A;&#x5206;&#x79BB;&#x51FA;&#x6765;&#x3002;&#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;&#x5C31;&#x662F; wordpress &#x7684;&#x63D2;&#x4EF6;&#x3002;</p>
+</li>
+</ul>
+<p>&#x5BF9;&#x4E8E;&#x81EA;&#x884C;&#x6258;&#x7BA1;&#x7684;&#x8F6F;&#x4EF6;&#x5305;&#xFF0C;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528; <code>composer</code> &#x7C7B;&#x578B;&#x8D44;&#x6E90;&#x5E93;&#x8BBE;&#x7F6E;&#xFF0C;&#x5B83;&#x5C06;&#x63D0;&#x4F9B;&#x6700;&#x4F73;&#x7684;&#x6027;&#x80FD;&#x3002;</p>
+<p>&#x8FD9;&#x91CC;&#x6709;&#x4E00;&#x4E9B;&#x5DE5;&#x5177;&#xFF0C;&#x53EF;&#x4EE5;&#x5E2E;&#x52A9;&#x4F60;&#x521B;&#x5EFA; <code>composer</code> &#x7C7B;&#x578B;&#x7684;&#x8D44;&#x6E90;&#x5E93;&#x3002;</p>
+<p><a name="Packagist"></a></p>
+<h3 id="packagist">Packagist</h3>
+<p>packagist &#x7684;&#x5E95;&#x5C42;&#x662F;&#x5F00;&#x6E90;&#x7684;&#x3002;&#x8FD9;&#x610F;&#x5473;&#x7740;&#x4F60;&#x53EF;&#x4EE5;&#x53EA;&#x5B89;&#x88C5;&#x4F60;&#x81EA;&#x5DF1;&#x62F7;&#x8D1D;&#x7684; packagist&#xFF0C;&#x6539;&#x9020;&#x5E76;&#x4F7F;&#x7528;&#x5B83;&#x3002;&#x8FD9;&#x771F;&#x7684;&#x662F;&#x5F88;&#x76F4;&#x63A5;&#x7B80;&#x5355;&#x7684;&#x4E8B;&#x60C5;&#x3002;&#x7136;&#x800C;&#xFF0C;&#x7531;&#x4E8E;&#x5176;&#x89C4;&#x6A21;&#x548C;&#x590D;&#x6742;&#x6027;&#xFF0C;&#x5BF9;&#x4E8E;&#x5927;&#x591A;&#x6570;&#x4E2D;&#x5C0F;&#x578B;&#x4F01;&#x4E1A;&#x8FD8;&#x662F;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528; Satis&#x3002;</p>
+<p>Packagist &#x662F;&#x4E00;&#x4E2A; Symfony2 &#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#xFF0C;&#x5E76;&#x4E14;&#x6258;&#x7BA1;&#x5728; GitHub &#x4E0A; <a href="https://github.com/composer/packagist" target="_blank">github.com/composer/packagist</a>&#x3002;&#x5B83;&#x5185;&#x90E8;&#x4F7F;&#x7528;&#x4E86; composer &#x5E76;&#x4F5C;&#x4E3A; VCS &#x8D44;&#x6E90;&#x5E93;&#x4E0E; composer &#x7528;&#x6237;&#x4E4B;&#x95F4;&#x7684;&#x4EE3;&#x7406;&#x3002;&#x5B83;&#x62E5;&#x6709;&#x6240;&#x6709; VCS &#x8D44;&#x6E90;&#x5305;&#x7684;&#x5217;&#x8868;&#xFF0C;&#x5B9A;&#x671F;&#x91CD;&#x65B0;&#x6293;&#x53D6;&#x5B83;&#x4EEC;&#xFF0C;&#x5E76;&#x5C06;&#x5176;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A; composer &#x8D44;&#x6E90;&#x5E93;&#x3002;</p>
+<p>&#x8981;&#x8BBE;&#x7F6E;&#x4F60;&#x7684;&#x526F;&#x672C;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x6309;&#x7167; <a href="https://github.com/composer/packagist" target="_blank">github.com/composer/packagist</a> &#x7684;&#x8BF4;&#x660E;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#x3002;</p>
+<p><a name="Satis"></a></p>
+<h3 id="satis">Satis</h3>
+<p>Satis &#x662F;&#x4E00;&#x4E2A;&#x9759;&#x6001;&#x7684; <code>composer</code> &#x8D44;&#x6E90;&#x5E93;&#x751F;&#x6210;&#x5668;&#x3002;&#x5B83;&#x50CF;&#x662F;&#x4E00;&#x4E2A;&#x8D85;&#x8F7B;&#x91CF;&#x7EA7;&#x7684;&#x3001;&#x57FA;&#x4E8E;&#x9759;&#x6001;&#x6587;&#x4EF6;&#x7684; packagist &#x7248;&#x672C;&#x3002;</p>
+<p>&#x4F60;&#x7ED9;&#x5B83;&#x4E00;&#x4E2A;&#x5305;&#x542B; <code>composer.json</code> &#x7684;&#x5B58;&#x50A8;&#x5E93;&#xFF0C;&#x5B9A;&#x4E49;&#x597D; VCS &#x548C; &#x8D44;&#x6E90;&#x5E93;&#x3002;&#x5B83;&#x4F1A;&#x83B7;&#x53D6;&#x6240;&#x6709;&#x4F60;&#x5217;&#x51FA;&#x7684;&#x5305;&#xFF0C;&#x5E76;&#x6253;&#x5370; <code>packages.json</code> &#x6587;&#x4EF6;&#xFF0C;&#x4F5C;&#x4E3A; <code>composer</code> &#x7C7B;&#x578B;&#x7684;&#x8D44;&#x6E90;&#x5E93;&#x3002;</p>
+<p>&#x66F4;&#x591A;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#x8BF7;&#x67E5;&#x770B; <a href="https://github.com/composer/satis" target="_blank">github.com/composer/satis</a> &#x548C; <a href="articles/handling-private-packages-with-satis.html">Satis article</a>&#x3002;</p>
+<p><a name="Artifact"></a></p>
+<h3 id="artifact">Artifact</h3>
+<p>&#x5728;&#x67D0;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6216;&#x8BB8;&#x6CA1;&#x6709;&#x80FD;&#x529B;&#x62E5;&#x6709;&#x4E4B;&#x524D;&#x63D0;&#x5230;&#x7684;&#x4EFB;&#x4F55;&#x4E00;&#x79CD;&#x7EBF;&#x4E0A;&#x8D44;&#x6E90;&#x5E93;&#x3002;Typical example could be cross-organisation library exchange through built artifacts&#x3002;&#x5F53;&#x7136;&#x5927;&#x90E8;&#x5206;&#x7684;&#x65F6;&#x95F4;&#x4ED6;&#x4EEC;&#x90FD;&#x662F;&#x79C1;&#x6709;&#x7684;&#x3002;&#x4E3A;&#x4E86;&#x7B80;&#x5316;&#x7EF4;&#x62A4;&#xFF0C;&#x53EF;&#x4EE5;&#x7B80;&#x5355;&#x7684;&#x4F7F;&#x7528; <code>artifact</code> &#x8D44;&#x6E90;&#x5E93;&#x7C7B;&#x578B;&#xFF0C;&#x6765;&#x5F15;&#x7528;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x90A3;&#x4E9B;&#x79C1;&#x6709;&#x5305;&#x7684; ZIP &#x5B58;&#x6863;&#x7684;&#x6587;&#x4EF6;&#x5939;&#xFF1A;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;repositories&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;artifact&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;path/to/directory/with/zips/&quot;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;require&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;private-vendor-one/core&quot;</span><span class="token operator">:</span> <span class="token string">&quot;15.6.2&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;private-vendor-two/connectivity&quot;</span><span class="token operator">:</span> <span class="token string">&quot;*&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;acme-corp/parser&quot;</span><span class="token operator">:</span> <span class="token string">&quot;10.3.5&quot;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x6BCF;&#x4E2A; zip artifact &#x90FD;&#x53EA;&#x662F;&#x4E00;&#x4E2A; ZIP &#x5B58;&#x6863;&#xFF0C;&#x653E;&#x7F6E;&#x5728; <code>composer.json</code> &#x6240;&#x5728;&#x7684;&#x6839;&#x76EE;&#x5F55;&#xFF1A;</p>
+<pre class="language-"><code class="lang-sh"><span class="token function">unzip</span> -l acme-corp-parser-10.3.5.zip
+
+composer.json
+<span class="token punctuation">..</span>.
+</code></pre>
+<p>&#x5982;&#x679C;&#x6709;&#x4E24;&#x4E2A;&#x4E0D;&#x540C;&#x7248;&#x672C;&#x7684;&#x8D44;&#x6E90;&#x5305;&#xFF0C;&#x5B83;&#x4EEC;&#x90FD;&#x4F1A;&#x88AB;&#x5BFC;&#x5165;&#x3002;&#x5F53;&#x6709;&#x4E00;&#x4E2A;&#x65B0;&#x7248;&#x672C;&#x7684;&#x5B58;&#x6863;&#x88AB;&#x6DFB;&#x52A0;&#x5230; artifact &#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x5E76;&#x4E14;&#x4F60;&#x8FD0;&#x884C;&#x4E86; <code>update</code> &#x547D;&#x4EE4;&#xFF0C;&#x8BE5;&#x7248;&#x672C;&#x5C31;&#x4F1A;&#x88AB;&#x5BFC;&#x5165;&#xFF0C;&#x5E76;&#x4E14; Composer &#x5C06;&#x66F4;&#x65B0;&#x5230;&#x6700;&#x65B0;&#x7248;&#x672C;&#x3002;</p>
+<p><a name="Disabling-Packagist"></a></p>
+<h2 id="&#x7981;&#x7528;-packagist">&#x7981;&#x7528; Packagist</h2>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x5728; <code>composer.json</code> &#x4E2D;&#x7981;&#x7528;&#x9ED8;&#x8BA4;&#x7684; Packagist &#x8D44;&#x6E90;&#x5E93;&#x3002;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;repositories&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">&quot;packagist&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x2190; <a href="04-schema.html">&#x67B6;&#x6784;</a>  |  <a href="06-community.html">&#x793E;&#x533A;</a> &#x2192;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="04-schema.html" class="navigation navigation-prev " aria-label="Previous page: 04 Schema">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="06-community.html" class="navigation navigation-next " aria-label="Next page: 06 Community">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"05 Repositories","level":"1.9","depth":1,"next":{"title":"06 Community","level":"1.10","depth":1,"path":"06-community.md","ref":"06-community.md","articles":[]},"previous":{"title":"04 Schema","level":"1.8","depth":1,"path":"04-schema.md","ref":"04-schema.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Composer 中文文档","language":"zh-hans","links":{"sidebar":{"Home":"https://docs.khs1994.com"}},"gitbook":"*"},"file":{"path":"05-repositories.md","mtime":"2020-03-01T00:14:17.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-01T00:14:54.926Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

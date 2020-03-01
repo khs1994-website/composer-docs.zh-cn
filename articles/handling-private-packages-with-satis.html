@@ -1,0 +1,698 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Handling Private Packages With Satis · Composer 中文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="plugins.html" />
+    
+    
+    <link rel="prev" href="custom-installers.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://docs.khs1994.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Articles
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="aliases.html">
+            
+                <a href="aliases.html">
+            
+                    
+                    Aliases
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="custom-installers.html">
+            
+                <a href="custom-installers.html">
+            
+                    
+                    Custom Installers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.3" data-path="handling-private-packages-with-satis.html">
+            
+                <a href="handling-private-packages-with-satis.html">
+            
+                    
+                    Handling Private Packages With Satis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="plugins.html">
+            
+                <a href="plugins.html">
+            
+                    
+                    Plugins
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="scripts.html">
+            
+                <a href="scripts.html">
+            
+                    
+                    Scripts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="troubleshooting.html">
+            
+                <a href="troubleshooting.html">
+            
+                    
+                    Troubleshooting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="vendor-binaries.html">
+            
+                <a href="vendor-binaries.html">
+            
+                    
+                    Vendor Binaries
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Dev
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../dev/DefaultPolicy.html">
+            
+                <a href="../dev/DefaultPolicy.html">
+            
+                    
+                    Default Policy
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    Faqs
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../faqs/how-do-i-install-a-package-to-a-custom-path-for-my-framework.html">
+            
+                <a href="../faqs/how-do-i-install-a-package-to-a-custom-path-for-my-framework.html">
+            
+                    
+                    How Do I Install A Package To A Custom Path For My Framework
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../faqs/should-i-commit-the-dependencies-in-my-vendor-directory.html">
+            
+                <a href="../faqs/should-i-commit-the-dependencies-in-my-vendor-directory.html">
+            
+                    
+                    Should I Commit The Dependencies In My Vendor Directory
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../faqs/why-are-unbound-version-constraints-a-bad-idea.html">
+            
+                <a href="../faqs/why-are-unbound-version-constraints-a-bad-idea.html">
+            
+                    
+                    Why Are Unbound Version Constraints A Bad Idea
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../faqs/why-are-version-constraints-combining-comparisons-and-wildcards-a-bad-idea.html">
+            
+                <a href="../faqs/why-are-version-constraints-combining-comparisons-and-wildcards-a-bad-idea.html">
+            
+                    
+                    Why Are Version Constraints Combining Comparisons And Wildcards A Bad Idea
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../faqs/why-can't-composer-load-repositories-recursively.html">
+            
+                <a href="../faqs/why-can't-composer-load-repositories-recursively.html">
+            
+                    
+                    Why Can T Composer Load Repositories Recursively
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../01-basic-usage.html">
+            
+                <a href="../01-basic-usage.html">
+            
+                    
+                    01 Basic Usage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../02-libraries.html">
+            
+                <a href="../02-libraries.html">
+            
+                    
+                    02 Libraries
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../03-cli.html">
+            
+                <a href="../03-cli.html">
+            
+                    
+                    03 Cli
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../04-schema.html">
+            
+                <a href="../04-schema.html">
+            
+                    
+                    04 Schema
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../05-repositories.html">
+            
+                <a href="../05-repositories.html">
+            
+                    
+                    05 Repositories
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../06-community.html">
+            
+                <a href="../06-community.html">
+            
+                    
+                    06 Community
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Handling Private Packages With Satis</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <!--
+    tagline: Host your own composer repository
+-->
+<h1 id="&#x7528;-satis-&#x5904;&#x7406;&#x79C1;&#x6709;&#x8D44;&#x6E90;&#x5305;">&#x7528; Satis &#x5904;&#x7406;&#x79C1;&#x6709;&#x8D44;&#x6E90;&#x5305;</h1>
+<p>Satis is a static <code>composer</code> repository generator. It is a bit like an ultra-
+lightweight, static file-based version of packagist and can be used to host the
+metadata of your company&apos;s private packages, or your own. It basically acts as
+a micro-packagist. You can get it from
+<a href="http://github.com/composer/satis" target="_blank">GitHub</a> or install via CLI:
+<code>composer.phar create-project composer/satis --stability=dev</code>.</p>
+<p>Satis &#x662F;&#x4E00;&#x4E2A;&#x9759;&#x6001;&#x7684; <code>composer</code> &#x4EE3;&#x7801;&#x5E93;&#x751F;&#x6210;&#x5668;&#x3002;</p>
+<h2 id="setup">Setup</h2>
+<p>For example let&apos;s assume you have a few packages you want to reuse across your
+company but don&apos;t really want to open-source. You would first define a Satis
+configuration: a json file with an arbitrary name that lists your curated 
+<a href="../05-repositories.html">repositories</a>.</p>
+<p>Here is an example configuration, you see that it holds a few VCS repositories,
+but those could be any types of <a href="../05-repositories.html">repositories</a>. Then it
+uses <code>&quot;require-all&quot;: true</code> which selects all versions of all packages in the
+repositories you defined.</p>
+<p>The default file Satis looks for is <code>satis.json</code> in the root of the repository.</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;My Repository&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;homepage&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://packages.example.org&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;repositories&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span> <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;vcs&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://github.com/mycompany/privaterepo&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span> <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;vcs&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://svn.example.org/private/repo&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span> <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;vcs&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://github.com/mycompany/privaterepo2&quot;</span> <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;require-all&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>If you want to cherry pick which packages you want, you can list all the packages
+you want to have in your satis repository inside the classic composer <code>require</code> key,
+using a <code>&quot;*&quot;</code> constraint to make sure all versions are selected, or another
+constraint if you want really specific versions.</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;repositories&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span> <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;vcs&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://github.com/mycompany/privaterepo&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span> <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;vcs&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://svn.example.org/private/repo&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span> <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;vcs&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://github.com/mycompany/privaterepo2&quot;</span> <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;require&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;company/package&quot;</span><span class="token operator">:</span> <span class="token string">&quot;*&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;company/package2&quot;</span><span class="token operator">:</span> <span class="token string">&quot;*&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;company/package3&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2.0.0&quot;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Once you did this, you just run <code>php bin/satis build <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>configuration</span> <span class="token attr-name">file</span><span class="token punctuation">&gt;</span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>build</span> <span class="token attr-name">dir</span><span class="token punctuation">&gt;</span></span></code>.
+For example <code>php bin/satis build config.json web/</code> would read the <code>config.json</code>
+file and build a static repository inside the <code>web/</code> directory.</p>
+<p>When you ironed out that process, what you would typically do is run this
+command as a cron job on a server. It would then update all your package info
+much like Packagist does.</p>
+<p>Note that if your private packages are hosted on GitHub, your server should have
+an ssh key that gives it access to those packages, and then you should add
+the <code>--no-interaction</code> (or <code>-n</code>) flag to the command to make sure it falls back
+to ssh key authentication instead of prompting for a password. This is also a
+good trick for continuous integration servers.</p>
+<p>Set up a virtual-host that points to that <code>web/</code> directory, let&apos;s say it is
+<code>packages.example.org</code>. Alternatively, with PHP &gt;= 5.4.0, you can use the built-in
+CLI server <code>php -S localhost:port -t satis-output-dir/</code> for a temporary solution.</p>
+<h2 id="usage">Usage</h2>
+<p>In your projects all you need to add now is your own composer repository using
+the <code>packages.example.org</code> as URL, then you can require your private packages and
+everything should work smoothly. You don&apos;t need to copy all your repositories
+in every project anymore. Only that one unique repository that will update
+itself.</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;repositories&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span> <span class="token punctuation">{</span> <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;composer&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://packages.example.org/&quot;</span> <span class="token punctuation">}</span> <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;require&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;company/package&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1.2.0&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;company/package2&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1.5.2&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;company/package3&quot;</span><span class="token operator">:</span> <span class="token string">&quot;dev-master&quot;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="security">Security</h3>
+<p>To secure your private repository you can host it over SSH or SSL using a client
+certificate. In your project you can use the <code>options</code> parameter to specify the
+connection options for the server.</p>
+<p>Example using a custom repository using SSH (requires the SSH2 PECL extension):</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;repositories&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;composer&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ssh2.sftp://example.org&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;options&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">&quot;ssh2&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;username&quot;</span><span class="token operator">:</span> <span class="token string">&quot;composer&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;pubkey_file&quot;</span><span class="token operator">:</span> <span class="token string">&quot;/home/composer/.ssh/id_rsa.pub&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;privkey_file&quot;</span><span class="token operator">:</span> <span class="token string">&quot;/home/composer/.ssh/id_rsa&quot;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<blockquote>
+<p><strong>Tip:</strong> See <a href="http://www.php.net/manual/en/wrappers.ssh2.php#refsect1-wrappers.ssh2-options" target="_blank">ssh2 context options</a> for more information.</p>
+</blockquote>
+<p>Example using HTTP over SSL using a client certificate:</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;repositories&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;composer&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;https://example.org&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;options&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">&quot;ssl&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;local_cert&quot;</span><span class="token operator">:</span> <span class="token string">&quot;/home/composer/.ssl/composer.pem&quot;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<blockquote>
+<p><strong>Tip:</strong> See <a href="http://www.php.net/manual/en/context.ssl.php" target="_blank">ssl context options</a> for more information.</p>
+</blockquote>
+<h3 id="downloads">Downloads</h3>
+<p>When GitHub or BitBucket repositories are mirrored on your local satis, the build process will include
+the location of the downloads these platforms make available. This means that the repository and your setup depend
+on the availability of these services.</p>
+<p>At the same time, this implies that all code which is hosted somewhere else (on another service or for example in
+Subversion) will not have downloads available and thus installations usually take a lot longer.</p>
+<p>To enable your satis installation to create downloads for all (Git, Mercurial and Subversion) your packages, add the
+following to your <code>satis.json</code>:</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;archive&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;directory&quot;</span><span class="token operator">:</span> <span class="token string">&quot;dist&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;format&quot;</span><span class="token operator">:</span> <span class="token string">&quot;tar&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;prefix-url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;https://amazing.cdn.example.org&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;skip-dev&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h4 id="options-explained">Options explained</h4>
+<ul>
+<li><code>directory</code>: the location of the dist files (inside the <code>output-dir</code>)</li>
+<li><code>format</code>: optional, <code>zip</code> (default) or <code>tar</code></li>
+<li><code>prefix-url</code>: optional, location of the downloads, homepage (from <code>satis.json</code>) followed by <code>directory</code> by default</li>
+<li><code>skip-dev</code>: optional, <code>false</code> by default, when enabled (<code>true</code>) satis will not create downloads for branches</li>
+</ul>
+<p>Once enabled, all downloads (include those from GitHub and BitBucket) will be replaced with a <em>local</em> version.</p>
+<h4 id="prefix-url">prefix-url</h4>
+<p>Prefixing the URL with another host is especially helpful if the downloads end up in a private Amazon S3
+bucket or on a CDN host. A CDN would drastically improve download times and therefore package installation.</p>
+<p>Example: A <code>prefix-url</code> of <code>http://my-bucket.s3.amazonaws.com</code> (and <code>directory</code> set to <code>dist</code>) creates download URLs
+which look like the following: <code>http://my-bucket.s3.amazonaws.com/dist/vendor-package-version-ref.zip</code>.</p>
+<h3 id="resolving-dependencies">Resolving dependencies</h3>
+<p>It is possible to make satis automatically resolve and add all dependencies for your projects. This can be used
+with the Downloads functionality to have a complete local mirror of packages. Just add the following
+to your <code>satis.json</code>:</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;require-dependencies&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>When searching for packages, satis will attempt to resolve all the required packages from the listed repositories.
+Therefore, if you are requiring a package from Packagist, you will need to define it in your <code>satis.json</code>.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="custom-installers.html" class="navigation navigation-prev " aria-label="Previous page: Custom Installers">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="plugins.html" class="navigation navigation-next " aria-label="Next page: Plugins">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Handling Private Packages With Satis","level":"1.2.3","depth":2,"next":{"title":"Plugins","level":"1.2.4","depth":2,"path":"articles/plugins.md","ref":"articles/plugins.md","articles":[]},"previous":{"title":"Custom Installers","level":"1.2.2","depth":2,"path":"articles/custom-installers.md","ref":"articles/custom-installers.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Composer 中文文档","language":"zh-hans","links":{"sidebar":{"Home":"https://docs.khs1994.com"}},"gitbook":"*"},"file":{"path":"articles/handling-private-packages-with-satis.md","mtime":"2020-03-01T00:14:17.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-01T00:14:54.926Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

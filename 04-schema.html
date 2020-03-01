@@ -1,0 +1,1126 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>04 Schema · Composer 中文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="05-repositories.html" />
+    
+    
+    <link rel="prev" href="03-cli.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://docs.khs1994.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Articles
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="articles/aliases.html">
+            
+                <a href="articles/aliases.html">
+            
+                    
+                    Aliases
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="articles/custom-installers.html">
+            
+                <a href="articles/custom-installers.html">
+            
+                    
+                    Custom Installers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="articles/handling-private-packages-with-satis.html">
+            
+                <a href="articles/handling-private-packages-with-satis.html">
+            
+                    
+                    Handling Private Packages With Satis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="articles/plugins.html">
+            
+                <a href="articles/plugins.html">
+            
+                    
+                    Plugins
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="articles/scripts.html">
+            
+                <a href="articles/scripts.html">
+            
+                    
+                    Scripts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="articles/troubleshooting.html">
+            
+                <a href="articles/troubleshooting.html">
+            
+                    
+                    Troubleshooting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="articles/vendor-binaries.html">
+            
+                <a href="articles/vendor-binaries.html">
+            
+                    
+                    Vendor Binaries
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Dev
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="dev/DefaultPolicy.html">
+            
+                <a href="dev/DefaultPolicy.html">
+            
+                    
+                    Default Policy
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    Faqs
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="faqs/how-do-i-install-a-package-to-a-custom-path-for-my-framework.html">
+            
+                <a href="faqs/how-do-i-install-a-package-to-a-custom-path-for-my-framework.html">
+            
+                    
+                    How Do I Install A Package To A Custom Path For My Framework
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="faqs/should-i-commit-the-dependencies-in-my-vendor-directory.html">
+            
+                <a href="faqs/should-i-commit-the-dependencies-in-my-vendor-directory.html">
+            
+                    
+                    Should I Commit The Dependencies In My Vendor Directory
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="faqs/why-are-unbound-version-constraints-a-bad-idea.html">
+            
+                <a href="faqs/why-are-unbound-version-constraints-a-bad-idea.html">
+            
+                    
+                    Why Are Unbound Version Constraints A Bad Idea
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="faqs/why-are-version-constraints-combining-comparisons-and-wildcards-a-bad-idea.html">
+            
+                <a href="faqs/why-are-version-constraints-combining-comparisons-and-wildcards-a-bad-idea.html">
+            
+                    
+                    Why Are Version Constraints Combining Comparisons And Wildcards A Bad Idea
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="faqs/why-can't-composer-load-repositories-recursively.html">
+            
+                <a href="faqs/why-can't-composer-load-repositories-recursively.html">
+            
+                    
+                    Why Can T Composer Load Repositories Recursively
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="01-basic-usage.html">
+            
+                <a href="01-basic-usage.html">
+            
+                    
+                    01 Basic Usage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="02-libraries.html">
+            
+                <a href="02-libraries.html">
+            
+                    
+                    02 Libraries
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="03-cli.html">
+            
+                <a href="03-cli.html">
+            
+                    
+                    03 Cli
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8" data-path="04-schema.html">
+            
+                <a href="04-schema.html">
+            
+                    
+                    04 Schema
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="05-repositories.html">
+            
+                <a href="05-repositories.html">
+            
+                    
+                    05 Repositories
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="06-community.html">
+            
+                <a href="06-community.html">
+            
+                    
+                    06 Community
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >04 Schema</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p><a name="composer.json"></a></p>
+<h1 id="composerjson-&#x67B6;&#x6784;">composer.json &#x67B6;&#x6784;</h1>
+<p>&#x672C;&#x7AE0;&#x5C06;&#x89E3;&#x91CA;&#x6240;&#x6709;&#x5728; <code>composer.json</code> &#x4E2D;&#x53EF;&#x7528;&#x7684;&#x5B57;&#x6BB5;&#x3002;</p>
+<hr>
+<ul>
+<li><a href="#composer.json">composer.json</a><ul>
+<li><a href="#JSON-schema">JSON schema</a></li>
+<li><a href="#Root-Package">Root &#x5305;</a></li>
+<li><a href="#Properties">&#x5C5E;&#x6027;</a><ul>
+<li><a href="#package-name">&#x5305;&#x540D; <code>name</code></a></li>
+<li><a href="#description">&#x63CF;&#x8FF0; <code>description</code></a></li>
+<li><a href="#version">&#x7248;&#x672C; <code>version</code></a></li>
+<li><a href="#type">&#x5B89;&#x88C5;&#x7C7B;&#x578B; <code>type</code></a></li>
+<li><a href="#keywords">&#x5173;&#x952E;&#x5B57; <code>keywords</code></a></li>
+<li><a href="#homepage">&#x9879;&#x76EE;&#x4E3B;&#x9875; <code>homepage</code></a></li>
+<li><a href="#time">&#x7248;&#x672C;&#x53D1;&#x5E03;&#x65F6;&#x95F4; <code>time</code></a></li>
+<li><a href="#license">&#x8BB8;&#x53EF;&#x534F;&#x8BAE; <code>license</code></a></li>
+<li><a href="#authors">&#x4F5C;&#x8005; <code>authors</code></a></li>
+<li><a href="#support">&#x652F;&#x6301; <code>support</code></a></li>
+<li><a href="#Package-links">Package links</a><ul>
+<li><a href="#require">require</a></li>
+<li><a href="#require-dev">require-dev <span>(root-only)</span></a></li>
+<li><a href="#conflict">conflict</a></li>
+<li><a href="#replace">replace</a></li>
+<li><a href="#provide">provide</a></li>
+</ul>
+</li>
+<li><a href="#suggest">suggest</a></li>
+<li><a href="#autoload">autoload</a><ul>
+<li><a href="#PSR-0">PSR-0</a></li>
+<li><a href="#Classmap">Classmap</a></li>
+<li><a href="#Files">Files</a></li>
+</ul>
+</li>
+<li><a href="#include-path">include-path</a></li>
+<li><a href="#target-dir">target-dir</a></li>
+<li><a href="#minimum-stability">minimum-stability <span>(root-only)</span></a></li>
+<li><a href="#prefer-stable">prefer-stable <span>(root-only)</span></a></li>
+<li><a href="#repositories">repositories <span>(root-only)</span></a></li>
+<li><a href="#config">config <span>(root-only)</span></a></li>
+<li><a href="#scripts">scripts <span>(root-only)</span></a></li>
+<li><a href="#extra">extra</a></li>
+<li><a href="#bin">bin</a></li>
+<li><a href="#archive">archive</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p><a name="JSON-schema"></a></p>
+<h2 id="json-schema">JSON schema</h2>
+<p>&#x6211;&#x4EEC;&#x6709;&#x4E00;&#x4E2A; <a href="http://json-schema.org" target="_blank">JSON schema</a> &#x683C;&#x5F0F;&#x5316;&#x6587;&#x6863;&#xFF0C;&#x5B83;&#x4E5F;&#x53EF;&#x4EE5;&#x88AB;&#x7528;&#x6765;&#x9A8C;&#x8BC1;&#x4F60;&#x7684; <code>composer.json</code> &#x6587;&#x4EF6;&#x3002;&#x4E8B;&#x5B9E;&#x4E0A;&#xFF0C;&#x5B83;&#x5DF2;&#x7ECF;&#x88AB; <code>validate</code> &#x547D;&#x4EE4;&#x6240;&#x4F7F;&#x7528;&#x3002; &#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x8FD9;&#x91CC;&#x627E;&#x5230;&#x5B83;&#xFF1A; <a href="https://github.com/composer/composer/blob/master/res/composer-schema.json" target="_blank"><code>res/composer-schema.json</code></a>.</p>
+<p><a name="Root-Package"></a></p>
+<h2 id="root-&#x5305;">Root &#x5305;</h2>
+<p>&#x201C;root &#x5305;&#x201D;&#x662F;&#x6307;&#x7531; <code>composer.json</code> &#x5B9A;&#x4E49;&#x7684;&#x5728;&#x4F60;&#x9879;&#x76EE;&#x6839;&#x76EE;&#x5F55;&#x7684;&#x5305;&#x3002;&#x8FD9;&#x662F; <code>composer.json</code> &#x5B9A;&#x4E49;&#x4F60;&#x9879;&#x76EE;&#x6240;&#x9700;&#x7684;&#x4E3B;&#x8981;&#x6761;&#x4EF6;&#x3002;&#xFF08;&#x7B80;&#x5355;&#x7684;&#x8BF4;&#xFF0C;&#x4F60;&#x81EA;&#x5DF1;&#x7684;&#x9879;&#x76EE;&#x5C31;&#x662F;&#x4E00;&#x4E2A; root &#x5305;&#xFF09;</p>
+<p>&#x67D0;&#x4E9B;&#x5B57;&#x6BB5;&#x4EC5;&#x9002;&#x7528;&#x4E8E;&#x201C;root &#x5305;&#x201D;&#x4E0A;&#x4E0B;&#x6587;&#x3002; <code>config</code> &#x5B57;&#x6BB5;&#x5C31;&#x662F;&#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;&#x3002;&#x53EA;&#x6709;&#x201C;root &#x5305;&#x201D;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x3002;&#x5728;&#x4F9D;&#x8D56;&#x5305;&#x4E2D;&#x5B9A;&#x4E49;&#x7684; <code>config</code> &#x5B57;&#x6BB5;&#x5C06;&#x88AB;&#x5FFD;&#x7565;&#xFF0C;&#x8FD9;&#x4F7F;&#x5F97; <code>config</code> &#x5B57;&#x6BB5;&#x53EA;&#x6709;&#x201C;root &#x5305;&#x201D;&#x53EF;&#x7528;&#xFF08;<code>root-only</code>&#xFF09;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x4F60;&#x514B;&#x9686;&#x4E86;&#x5176;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x4F9D;&#x8D56;&#x5305;&#xFF0C;&#x76F4;&#x63A5;&#x5728;&#x5176;&#x4E0A;&#x5F00;&#x59CB;&#x5DE5;&#x4F5C;&#xFF0C;&#x90A3;&#x4E48;&#x5B83;&#x5C31;&#x53D8;&#x6210;&#x4E86;&#x201C;root &#x5305;&#x201D;&#x3002;&#x4E0E;&#x4F5C;&#x4E3A;&#x4ED6;&#x4EBA;&#x7684;&#x4F9D;&#x8D56;&#x5305;&#x65F6;&#x4F7F;&#x7528;&#x76F8;&#x540C;&#x7684; <code>composer.json</code> &#x6587;&#x4EF6;&#xFF0C;&#x4F46;&#x4E0A;&#x4E0B;&#x6587;&#x53D1;&#x751F;&#x4E86;&#x53D8;&#x5316;&#x3002;</p>
+<blockquote>
+<p><strong>&#x6CE8;&#x610F;&#xFF1A;</strong> &#x4E00;&#x4E2A;&#x8D44;&#x6E90;&#x5305;&#x662F;&#x4E0D;&#x662F;&#x201C;root &#x5305;&#x201D;&#xFF0C;&#x53D6;&#x51B3;&#x4E8E;&#x5B83;&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#x3002;
+&#x4F8B;&#xFF1A;&#x5982;&#x679C;&#x4F60;&#x7684;&#x9879;&#x76EE;&#x4F9D;&#x8D56; <code>monolog</code> &#x5E93;&#xFF0C;&#x90A3;&#x4E48;&#x4F60;&#x7684;&#x9879;&#x76EE;&#x5C31;&#x662F;&#x201C;root &#x5305;&#x201D;&#x3002;
+&#x4F46;&#x662F;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x4ECE; GitHub &#x4E0A;&#x514B;&#x9686;&#x4E86; <code>monolog</code> &#x4E3A;&#x5B83;&#x4FEE;&#x590D; bug&#xFF0C;
+&#x90A3;&#x4E48;&#x6B64;&#x65F6; <code>monolog</code> &#x5C31;&#x662F;&#x201C;root &#x5305;&#x201D;&#x3002;</p>
+</blockquote>
+<p><a name="Properties"></a></p>
+<h2 id="&#x5C5E;&#x6027;">&#x5C5E;&#x6027;</h2>
+<p><a name="package-name"></a></p>
+<h3 id="&#x5305;&#x540D;-name">&#x5305;&#x540D; <code>name</code></h3>
+<p>&#x5305;&#x7684;&#x540D;&#x79F0;&#xFF0C;&#x5B83;&#x5305;&#x62EC;&#x4F9B;&#x5E94;&#x5546;&#x540D;&#x79F0;&#x548C;&#x9879;&#x76EE;&#x540D;&#x79F0;&#xFF0C;&#x4F7F;&#x7528; <code>/</code> &#x5206;&#x9694;&#x3002;</p>
+<p>&#x4F8B;&#xFF1A;</p>
+<ul>
+<li>monolog/monolog</li>
+<li>igorw/event-source</li>
+</ul>
+<p>&#x5BF9;&#x4E8E;&#x9700;&#x8981;&#x53D1;&#x5E03;&#x7684;&#x5305;&#xFF08;&#x5E93;&#xFF09;&#xFF0C;&#x8FD9;&#x662F;&#x5FC5;&#x987B;&#x586B;&#x5199;&#x7684;&#x3002;</p>
+<p><a name="description"></a></p>
+<h3 id="&#x63CF;&#x8FF0;-description">&#x63CF;&#x8FF0; <code>description</code></h3>
+<p>&#x4E00;&#x4E2A;&#x5305;&#x7684;&#x7B80;&#x77ED;&#x63CF;&#x8FF0;&#x3002;&#x901A;&#x5E38;&#x8FD9;&#x4E2A;&#x6700;&#x957F;&#x53EA;&#x6709;&#x4E00;&#x884C;&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#x9700;&#x8981;&#x53D1;&#x5E03;&#x7684;&#x5305;&#xFF08;&#x5E93;&#xFF09;&#xFF0C;&#x8FD9;&#x662F;&#x5FC5;&#x987B;&#x586B;&#x5199;&#x7684;&#x3002;</p>
+<p><a name="version"></a></p>
+<h3 id="&#x7248;&#x672C;-version">&#x7248;&#x672C; <code>version</code></h3>
+<p><code>version</code> &#x4E0D;&#x662F;&#x5FC5;&#x987B;&#x7684;&#xFF0C;&#x5E76;&#x4E14;&#x5EFA;&#x8BAE;&#x5FFD;&#x7565;&#xFF08;&#x89C1;&#x4E0B;&#x6587;&#xFF09;&#x3002;</p>
+<p>&#x5B83;&#x5E94;&#x8BE5;&#x7B26;&#x5408; &apos;X.Y.Z&apos; &#x6216;&#x8005; &apos;vX.Y.Z&apos; &#x7684;&#x5F62;&#x5F0F;&#xFF0C; <code>-dev</code>&#x3001;<code>-patch</code>&#x3001;<code>-alpha</code>&#x3001;<code>-beta</code> &#x6216; <code>-RC</code> &#x8FD9;&#x4E9B;&#x540E;&#x7F00;&#x662F;&#x53EF;&#x9009;&#x7684;&#x3002;&#x5728;&#x540E;&#x7F00;&#x4E4B;&#x540E;&#x4E5F;&#x53EF;&#x4EE5;&#x518D;&#x8DDF;&#x4E0A;&#x4E00;&#x4E2A;&#x6570;&#x5B57;&#x3002;</p>
+<p>&#x4F8B;&#xFF1A;</p>
+<ul>
+<li>1.0.0</li>
+<li>1.0.2</li>
+<li>1.1.0</li>
+<li>0.2.5</li>
+<li>1.0.0-dev</li>
+<li>1.0.0-alpha3</li>
+<li>1.0.0-beta2</li>
+<li>1.0.0-RC5</li>
+</ul>
+<p>&#x901A;&#x5E38;&#xFF0C;&#x6211;&#x4EEC;&#x80FD;&#x591F;&#x4ECE; VCS (git, svn, hg) &#x7684;&#x4FE1;&#x606F;&#x63A8;&#x65AD;&#x51FA;&#x5305;&#x7684;&#x7248;&#x672C;&#x53F7;&#xFF0C;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6211;&#x4EEC;&#x5EFA;&#x8BAE;&#x5FFD;&#x7565; <code>version</code>&#x3002;</p>
+<blockquote>
+<p><strong>&#x6CE8;&#x610F;&#xFF1A;</strong> Packagist &#x4F7F;&#x7528; VCS &#x4ED3;&#x5E93;&#xFF0C;
+&#x56E0;&#x6B64; <code>version</code> &#x5B9A;&#x4E49;&#x7684;&#x7248;&#x672C;&#x53F7;&#x5FC5;&#x987B;&#x662F;&#x771F;&#x5B9E;&#x51C6;&#x786E;&#x7684;&#x3002;
+&#x81EA;&#x5DF1;&#x624B;&#x52A8;&#x6307;&#x5B9A;&#x7684; <code>version</code>&#xFF0C;&#x6700;&#x7EC8;&#x6709;&#x53EF;&#x80FD;&#x5728;&#x67D0;&#x4E2A;&#x65F6;&#x5019;&#x56E0;&#x4E3A;&#x4EBA;&#x4E3A;&#x9519;&#x8BEF;&#x9020;&#x6210;&#x95EE;&#x9898;&#x3002;</p>
+</blockquote>
+<p><a name="type"></a></p>
+<h3 id="&#x5B89;&#x88C5;&#x7C7B;&#x578B;-type">&#x5B89;&#x88C5;&#x7C7B;&#x578B; <code>type</code></h3>
+<p>&#x5305;&#x7684;&#x5B89;&#x88C5;&#x7C7B;&#x578B;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A; <code>library</code>&#x3002;</p>
+<p>&#x5305;&#x7684;&#x5B89;&#x88C5;&#x7C7B;&#x578B;&#xFF0C;&#x7528;&#x6765;&#x5B9A;&#x4E49;&#x5B89;&#x88C5;&#x903B;&#x8F91;&#x3002;&#x5982;&#x679C;&#x4F60;&#x6709;&#x4E00;&#x4E2A;&#x5305;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x7279;&#x6B8A;&#x7684;&#x903B;&#x8F91;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x8BBE;&#x5B9A;&#x4E00;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x7C7B;&#x578B;&#x3002;&#x8FD9;&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A; <code>symfony-bundle</code>&#xFF0C;&#x4E00;&#x4E2A; <code>wordpress-plugin</code> &#x6216;&#x8005;&#x4E00;&#x4E2A; <code>typo3-module</code>&#x3002;&#x8FD9;&#x4E9B;&#x7C7B;&#x578B;&#x90FD;&#x5C06;&#x662F;&#x5177;&#x4F53;&#x5230;&#x67D0;&#x4E00;&#x4E2A;&#x9879;&#x76EE;&#xFF0C;&#x800C;&#x5BF9;&#x5E94;&#x7684;&#x9879;&#x76EE;&#x5C06;&#x8981;&#x63D0;&#x4F9B;&#x4E00;&#x79CD;&#x80FD;&#x591F;&#x5B89;&#x88C5;&#x8BE5;&#x7C7B;&#x578B;&#x5305;&#x7684;&#x5B89;&#x88C5;&#x7A0B;&#x5E8F;&#x3002;</p>
+<p>composer &#x539F;&#x751F;&#x652F;&#x6301;&#x4EE5;&#x4E0B;4&#x79CD;&#x7C7B;&#x578B;&#xFF1A;</p>
+<ul>
+<li><strong>library:</strong> &#x8FD9;&#x662F;&#x9ED8;&#x8BA4;&#x7C7B;&#x578B;&#xFF0C;&#x5B83;&#x4F1A;&#x7B80;&#x5355;&#x7684;&#x5C06;&#x6587;&#x4EF6;&#x590D;&#x5236;&#x5230; <code>vendor</code> &#x76EE;&#x5F55;&#x3002;</li>
+<li><strong>project:</strong> &#x8FD9;&#x8868;&#x793A;&#x5F53;&#x524D;&#x5305;&#x662F;&#x4E00;&#x4E2A;&#x9879;&#x76EE;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x5E93;&#x3002;&#x4F8B;&#xFF1A;&#x6846;&#x67B6;&#x5E94;&#x7528;&#x7A0B;&#x5E8F; <a href="https://github.com/symfony/symfony-standard" target="_blank">Symfony standard edition</a>&#xFF0C;&#x5185;&#x5BB9;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF; <a href="https://github.com/silverstripe/silverstripe-installer" target="_blank">SilverStripe installer</a> &#x6216;&#x8005;&#x5B8C;&#x5168;&#x6210;&#x719F;&#x7684;&#x5206;&#x5E03;&#x5F0F;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x3002;&#x4F7F;&#x7528; IDE &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5DE5;&#x4F5C;&#x533A;&#x65F6;&#xFF0C;&#x8FD9;&#x53EF;&#x4EE5;&#x4E3A;&#x5176;&#x63D0;&#x4F9B;&#x9879;&#x76EE;&#x5217;&#x8868;&#x7684;&#x521D;&#x59CB;&#x5316;&#x3002;</li>
+<li><strong>metapackage:</strong> &#x5F53;&#x4E00;&#x4E2A;&#x7A7A;&#x7684;&#x5305;&#xFF0C;&#x5305;&#x542B;&#x4F9D;&#x8D56;&#x5E76;&#x4E14;&#x9700;&#x8981;&#x89E6;&#x53D1;&#x4F9D;&#x8D56;&#x7684;&#x5B89;&#x88C5;&#xFF0C;&#x8FD9;&#x5C06;&#x4E0D;&#x4F1A;&#x5BF9;&#x7CFB;&#x7EDF;&#x5199;&#x5165;&#x989D;&#x5916;&#x7684;&#x6587;&#x4EF6;&#x3002;&#x56E0;&#x6B64;&#x8FD9;&#x79CD;&#x5B89;&#x88C5;&#x7C7B;&#x578B;&#x5E76;&#x4E0D;&#x9700;&#x8981;&#x4E00;&#x4E2A; dist &#x6216; source&#x3002;</li>
+<li><strong>composer-plugin:</strong> &#x4E00;&#x4E2A;&#x5B89;&#x88C5;&#x7C7B;&#x578B;&#x4E3A; <code>composer-plugin</code> &#x7684;&#x5305;&#xFF0C;&#x5B83;&#x6709;&#x4E00;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;&#x5B89;&#x88C5;&#x7C7B;&#x578B;&#xFF0C;&#x53EF;&#x4EE5;&#x4E3A;&#x5176;&#x5B83;&#x5305;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A; installler&#x3002;&#x8BE6;&#x7EC6;&#x8BF7;&#x67E5;&#x770B; <a href="articles/custom-installers.html">&#x81EA;&#x5B9A;&#x4E49;&#x5B89;&#x88C5;&#x7C7B;&#x578B;</a>&#x3002;</li>
+</ul>
+<p>&#x4EC5;&#x5728;&#x4F60;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x5B89;&#x88C5;&#x903B;&#x8F91;&#x65F6;&#x624D;&#x4F7F;&#x7528;&#x5B83;&#x3002;&#x5EFA;&#x8BAE;&#x5FFD;&#x7565;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#xFF0C;&#x91C7;&#x7528;&#x9ED8;&#x8BA4;&#x7684; <code>library</code>&#x3002;</p>
+<p><a name="keywords"></a></p>
+<h3 id="&#x5173;&#x952E;&#x5B57;-keywords">&#x5173;&#x952E;&#x5B57; <code>keywords</code></h3>
+<p>&#x8BE5;&#x5305;&#x76F8;&#x5173;&#x7684;&#x5173;&#x952E;&#x8BCD;&#x7684;&#x6570;&#x7EC4;&#x3002;&#x8FD9;&#x4E9B;&#x53EF;&#x7528;&#x4E8E;&#x641C;&#x7D22;&#x548C;&#x8FC7;&#x6EE4;&#x3002;</p>
+<p>&#x5B9E;&#x4F8B;&#xFF1A;</p>
+<ul>
+<li>logging</li>
+<li>events</li>
+<li>database</li>
+<li>redis</li>
+<li>templating</li>
+</ul>
+<p>&#x53EF;&#x9009;&#x3002;</p>
+<p><a name="homepage"></a></p>
+<h3 id="&#x9879;&#x76EE;&#x4E3B;&#x9875;-homepage">&#x9879;&#x76EE;&#x4E3B;&#x9875; <code>homepage</code></h3>
+<p>&#x8BE5;&#x9879;&#x76EE;&#x7F51;&#x7AD9;&#x7684; URL &#x5730;&#x5740;&#x3002;</p>
+<p>&#x53EF;&#x9009;&#x3002;</p>
+<p><a name="time"></a></p>
+<h3 id="&#x7248;&#x672C;&#x53D1;&#x5E03;&#x65F6;&#x95F4;-time">&#x7248;&#x672C;&#x53D1;&#x5E03;&#x65F6;&#x95F4; <code>time</code></h3>
+<p>&#x7248;&#x672C;&#x53D1;&#x5E03;&#x65F6;&#x95F4;&#x3002;</p>
+<p>&#x5FC5;&#x987B;&#x7B26;&#x5408; <code>YYYY-MM-DD</code> &#x6216; <code>YYYY-MM-DD HH:MM:SS</code> &#x683C;&#x5F0F;&#x3002;</p>
+<p>&#x53EF;&#x9009;&#x3002;</p>
+<p><a name="license"></a></p>
+<h3 id="&#x8BB8;&#x53EF;&#x534F;&#x8BAE;-license">&#x8BB8;&#x53EF;&#x534F;&#x8BAE; <code>license</code></h3>
+<p>&#x5305;&#x7684;&#x8BB8;&#x53EF;&#x534F;&#x8BAE;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x6216;&#x8005;&#x5B57;&#x7B26;&#x4E32;&#x6570;&#x7EC4;&#x3002;</p>
+<p>&#x6700;&#x5E38;&#x89C1;&#x7684;&#x8BB8;&#x53EF;&#x534F;&#x8BAE;&#x7684;&#x63A8;&#x8350;&#x5199;&#x6CD5;&#xFF08;&#x6309;&#x5B57;&#x6BCD;&#x6392;&#x5E8F;&#xFF09;&#xFF1A;</p>
+<ul>
+<li>Apache-2.0</li>
+<li>BSD-2-Clause</li>
+<li>BSD-3-Clause</li>
+<li>BSD-4-Clause</li>
+<li>GPL-2.0</li>
+<li>GPL-2.0+</li>
+<li>GPL-3.0</li>
+<li>GPL-3.0+</li>
+<li>LGPL-2.1</li>
+<li>LGPL-2.1+</li>
+<li>LGPL-3.0</li>
+<li>LGPL-3.0+</li>
+<li>MIT</li>
+</ul>
+<p>&#x53EF;&#x9009;&#xFF0C;&#x4F46;&#x5F3A;&#x70C8;&#x5EFA;&#x8BAE;&#x63D0;&#x4F9B;&#x6B64;&#x5185;&#x5BB9;&#x3002;&#x66F4;&#x591A;&#x8BB8;&#x53EF;&#x534F;&#x8BAE;&#x7684;&#x6807;&#x8BC6;&#x7B26;&#x8BF7;&#x53C2;&#x89C1; <a href="http://www.spdx.org/licenses/" target="_blank">SPDX Open Source License Registry</a>&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#x95ED;&#x6E90;&#x8F6F;&#x4EF6;&#xFF0C;&#x4F60;&#x5FC5;&#x987B;&#x4F7F;&#x7528; <code>&quot;proprietary&quot;</code> &#x534F;&#x8BAE;&#x6807;&#x8BC6;&#x7B26;&#x3002;</p>
+<p>&#x4E00;&#x4E2A;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;license&quot;</span><span class="token operator">:</span> <span class="token string">&quot;MIT&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x5BF9;&#x4E8E;&#x4E00;&#x4E2A;&#x5305;&#xFF0C;&#x5F53;&#x5141;&#x8BB8;&#x5728;&#x591A;&#x4E2A;&#x8BB8;&#x53EF;&#x534F;&#x8BAE;&#x95F4;&#x8FDB;&#x884C;&#x9009;&#x62E9;&#x65F6;&#xFF08;&quot;disjunctive license&quot;&#xFF09;&#xFF0C;&#x8FD9;&#x4E9B;&#x534F;&#x8BAE;&#x6807;&#x8BC6;&#x7B26;&#x53EF;&#x4EE5;&#x88AB;&#x6307;&#x5B9A;&#x4E3A;&#x6570;&#x7EC4;&#x3002;</p>
+<p>&#x591A;&#x534F;&#x8BAE;&#x7684;&#x4E00;&#x4E2A;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;license&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+       <span class="token string">&quot;LGPL-2.1&quot;</span><span class="token punctuation">,</span>
+       <span class="token string">&quot;GPL-3.0+&quot;</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x53E6;&#x5916;&#x5B83;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x7531; &quot;or&quot; &#x5206;&#x9694;&#xFF0C;&#x5E76;&#x5199;&#x5728;&#x62EC;&#x53F7;&#x4E2D;&#xFF1A;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;license&quot;</span><span class="token operator">:</span> <span class="token string">&quot;(LGPL-2.1 or GPL-3.0+)&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x540C;&#x6837;&#xFF0C;&#x5F53;&#x6709;&#x591A;&#x4E2A;&#x8BB8;&#x53EF;&#x534F;&#x8BAE;&#x9700;&#x8981;&#x7ED3;&#x5408;&#x4F7F;&#x7528;&#x65F6;&#xFF08;&quot;conjunctive license&quot;&#xFF09;&#xFF0C;&#x5B83;&#x4EEC;&#x5E94;&#x8BE5;&#x88AB; &quot;and&quot; &#x5206;&#x9694;&#xFF0C;&#x5E76;&#x5199;&#x5728;&#x62EC;&#x53F7;&#x4E2D;&#x3002;</p>
+<p><a name="authors"></a></p>
+<h3 id="&#x4F5C;&#x8005;-authors">&#x4F5C;&#x8005; <code>authors</code></h3>
+<p>&#x5305;&#x7684;&#x4F5C;&#x8005;&#x3002;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x6570;&#x7EC4;&#x3002;</p>
+<p>&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x5FC5;&#x987B;&#x5305;&#x542B;&#x4EE5;&#x4E0B;&#x5C5E;&#x6027;&#xFF1A;</p>
+<ul>
+<li><strong>name:</strong> &#x4F5C;&#x8005;&#x7684;&#x59D3;&#x540D;&#xFF0C;&#x901A;&#x5E38;&#x4F7F;&#x7528;&#x771F;&#x540D;&#x3002;</li>
+<li><strong>email:</strong> &#x4F5C;&#x8005;&#x7684; email &#x5730;&#x5740;&#x3002;</li>
+<li><strong>homepage:</strong> &#x4F5C;&#x8005;&#x4E3B;&#x9875;&#x7684; URL &#x5730;&#x5740;&#x3002;</li>
+<li><strong>role:</strong> &#x8BE5;&#x4F5C;&#x8005;&#x5728;&#x6B64;&#x9879;&#x76EE;&#x4E2D;&#x62C5;&#x4EFB;&#x7684;&#x89D2;&#x8272;&#xFF08;&#x4F8B;&#xFF1A;&#x5F00;&#x53D1;&#x4EBA;&#x5458; &#x6216; &#x7FFB;&#x8BD1;&#xFF09;&#x3002;</li>
+</ul>
+<p>&#x4E00;&#x4E2A;&#x5B9E;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;authors&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Nils Adermann&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;email&quot;</span><span class="token operator">:</span> <span class="token string">&quot;naderman@naderman.de&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;homepage&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://www.naderman.de&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;role&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Developer&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Jordi Boggiano&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;email&quot;</span><span class="token operator">:</span> <span class="token string">&quot;j.boggiano@seld.be&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;homepage&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://seld.be&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;role&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Developer&quot;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x53EF;&#x9009;&#xFF0C;&#x4F46;&#x5F3A;&#x70C8;&#x5EFA;&#x8BAE;&#x63D0;&#x4F9B;&#x6B64;&#x5185;&#x5BB9;&#x3002;</p>
+<p><a name="support"></a></p>
+<h3 id="&#x652F;&#x6301;-support">&#x652F;&#x6301; <code>support</code></h3>
+<p>&#x83B7;&#x53D6;&#x9879;&#x76EE;&#x652F;&#x6301;&#x7684;&#x5411;&#x76F8;&#x5173;&#x4FE1;&#x606F;&#x5BF9;&#x8C61;&#x3002;</p>
+<p>&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x5FC5;&#x987B;&#x5305;&#x542B;&#x4EE5;&#x4E0B;&#x5C5E;&#x6027;&#xFF1A;</p>
+<ul>
+<li><strong>email:</strong> &#x9879;&#x76EE;&#x652F;&#x6301; email &#x5730;&#x5740;&#x3002;</li>
+<li><strong>issues:</strong> &#x8DDF;&#x8E2A;&#x95EE;&#x9898;&#x7684; URL &#x5730;&#x5740;&#x3002;</li>
+<li><strong>forum:</strong> &#x8BBA;&#x575B;&#x5730;&#x5740;&#x3002;</li>
+<li><strong>wiki:</strong> Wiki &#x5730;&#x5740;&#x3002;</li>
+<li><strong>irc:</strong> IRC &#x804A;&#x5929;&#x9891;&#x9053;&#x5730;&#x5740;&#xFF0C;&#x7C7B;&#x4F3C;&#x4E8E; irc://server/channel&#x3002;</li>
+<li><strong>source:</strong> &#x7F51;&#x5740;&#x6D4F;&#x89C8;&#x6216;&#x4E0B;&#x8F7D;&#x6E90;&#x3002;</li>
+</ul>
+<p>&#x4E00;&#x4E2A;&#x5B9E;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;support&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;email&quot;</span><span class="token operator">:</span> <span class="token string">&quot;support@example.org&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;irc&quot;</span><span class="token operator">:</span> <span class="token string">&quot;irc://irc.freenode.org/composer&quot;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x53EF;&#x9009;&#x3002;</p>
+<p><a name="Package-links"></a></p>
+<h3 id="package-links">Package links</h3>
+<p>&#x4E0B;&#x9762;&#x63D0;&#x5230;&#x7684;&#x6240;&#x6709;&#x5BF9;&#x8C61;&#xFF0C;&#x90FD;&#x5E94;&#x8BE5;&#x662F; &#x5305;&#x540D; &#x5230; <a href="01-basic-usage.html#Package-Versions">&#x7248;&#x672C;</a> &#x7684;&#x6620;&#x5C04;&#x5BF9;&#x8C61;&#x3002;</p>
+<p>&#x5B9E;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;require&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;monolog/monolog&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1.0.*&quot;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x6240;&#x6709;&#x7684;&#x8FD9;&#x4E9B;&#x90FD;&#x662F;&#x53EF;&#x9009;&#x7684;&#x3002;</p>
+<p><code>require</code> &#x548C; <code>require-dev</code> &#x8FD8;&#x652F;&#x6301;&#x7A33;&#x5B9A;&#x6027;&#x6807;&#x7B7E;&#xFF08;@&#xFF0C;&#x4EC5;&#x9488;&#x5BF9;&#x201C;root &#x5305;&#x201D;&#xFF09;&#x3002;&#x8FD9;&#x5141;&#x8BB8;&#x4F60;&#x5728; <a href="#minimum-stability">minimum-stability</a> &#x8BBE;&#x5B9A;&#x7684;&#x8303;&#x56F4;&#x5916;&#x505A;&#x8FDB;&#x4E00;&#x6B65;&#x7684;&#x9650;&#x5236;&#x6216;&#x6269;&#x5C55;&#x3002;&#x4F8B;&#xFF1A;&#x5982;&#x679C;&#x4F60;&#x60F3;&#x5141;&#x8BB8;&#x4F9D;&#x8D56;&#x4E00;&#x4E2A;&#x4E0D;&#x7A33;&#x5B9A;&#x7684;&#x5305;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x4E00;&#x4E2A;&#x5305;&#x7684;&#x7248;&#x672C;&#x7EA6;&#x675F;&#x540E;&#x4F7F;&#x7528;&#x5B83;&#xFF0C;&#x6216;&#x8005;&#x662F;&#x4E00;&#x4E2A;&#x7A7A;&#x7684;&#x7248;&#x672C;&#x7EA6;&#x675F;&#x5185;&#x4F7F;&#x7528;&#x5B83;&#x3002;</p>
+<p>&#x5B9E;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;require&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;monolog/monolog&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1.0.*@beta&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;acme/foo&quot;</span><span class="token operator">:</span> <span class="token string">&quot;@dev&quot;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x5982;&#x679C;&#x4F60;&#x7684;&#x4F9D;&#x8D56;&#x4E4B;&#x4E00;&#xFF0C;&#x6709;&#x5BF9;&#x53E6;&#x4E00;&#x4E2A;&#x4E0D;&#x7A33;&#x5B9A;&#x5305;&#x7684;&#x4F9D;&#x8D56;&#xFF0C;&#x4F60;&#x6700;&#x597D;&#x5728; require &#x4E2D;&#x663E;&#x793A;&#x7684;&#x5B9A;&#x4E49;&#x5B83;&#xFF0C;&#x5E76;&#x5E26;&#x4E0A;&#x8DB3;&#x591F;&#x8BE6;&#x7EC6;&#x7684;&#x7A33;&#x5B9A;&#x6027;&#x6807;&#x8BC6;&#x3002;</p>
+<p>&#x5B9E;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;require&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;doctrine/doctrine-fixtures-bundle&quot;</span><span class="token operator">:</span> <span class="token string">&quot;dev-master&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;doctrine/data-fixtures&quot;</span><span class="token operator">:</span> <span class="token string">&quot;@dev&quot;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><code>require</code> &#x548C; <code>require-dev</code> &#x8FD8;&#x652F;&#x6301;&#x5BF9; dev&#xFF08;&#x5F00;&#x53D1;&#xFF09;&#x7248;&#x672C;&#x7684;&#x660E;&#x786E;&#x5F15;&#x7528;&#xFF08;&#x5373;&#xFF1A;&#x7248;&#x672C;&#x63A7;&#x5236;&#x7CFB;&#x7EDF;&#x4E2D;&#x7684;&#x63D0;&#x4EA4;&#x7F16;&#x53F7; commit&#xFF09;&#xFF0C;&#x4EE5;&#x786E;&#x4FDD;&#x5B83;&#x4EEC;&#x88AB;&#x9501;&#x5B9A;&#x5230;&#x4E00;&#x4E2A;&#x7ED9;&#x5B9A;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x5373;&#x4F7F;&#x4F60;&#x8FD0;&#x884C;&#x4E86;&#x66F4;&#x65B0;&#x547D;&#x4EE4;&#x3002;&#x4F60;&#x53EA;&#x9700;&#x8981;&#x660E;&#x786E;&#x4E00;&#x4E2A;&#x5F00;&#x53D1;&#x7248;&#x672C;&#x53F7;&#xFF0C;&#x5E76;&#x5E26;&#x4E0A;&#x8BF8;&#x5982; <code>#<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ref</span><span class="token punctuation">&gt;</span></span></code> &#x7684;&#x6807;&#x8BC6;&#x3002;</p>
+<p>&#x5B9E;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;require&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;monolog/monolog&quot;</span><span class="token operator">:</span> <span class="token string">&quot;dev-master#2eb0c0978d290a1c45346a1955188929cb4e5db7&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;acme/foo&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1.0.x-dev#abc123&quot;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<blockquote>
+<p><strong>&#x6CE8;&#x610F;&#xFF1A;</strong> &#x867D;&#x7136;&#x8FD9;&#x6709;&#x65F6;&#x5F88;&#x65B9;&#x4FBF;&#xFF0C;&#x4F46;&#x4E0D;&#x5E94;&#x8BE5;&#x957F;&#x671F;&#x5728;&#x4F60;&#x7684;&#x5305;&#x4E2D;&#x4F7F;&#x7528;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x6709;&#x4E00;&#x4E2A;&#x6280;&#x672F;&#x4E0A;&#x7684;&#x9650;&#x5236;&#x3002;
+composer.json &#x5C06;&#x4ECD;&#x7136;&#x5728;&#x54C8;&#x5E0C;&#x503C;&#x4E4B;&#x524D;&#x6307;&#x5B9A;&#x7684;&#x5206;&#x652F;&#x540D;&#x79F0;&#x8BFB;&#x53D6;&#x5143;&#x6570;&#x636E;&#xFF0C;
+&#x6B63;&#x56E0;&#x4E3A;&#x5982;&#x6B64;&#xFF0C;&#x5728;&#x67D0;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5B83;&#x4E0D;&#x4F1A;&#x662F;&#x4E00;&#x4E2A;&#x5B9E;&#x7528;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6CD5;&#xFF0C;
+&#x5982;&#x679C;&#x53EF;&#x80FD;&#xFF0C;&#x4F60;&#x5E94;&#x8BE5;&#x603B;&#x662F;&#x5C1D;&#x8BD5;&#x5207;&#x6362;&#x5230;&#x62E5;&#x6709;&#x6807;&#x7B7E;&#x7684;&#x7248;&#x672C;&#x3002;</p>
+</blockquote>
+<p>&#x5B83;&#x4E5F;&#x53EF;&#x4EE5;&#x5E94;&#x7528;&#x4E8E;&#x884C;&#x5185;&#x522B;&#x540D;&#xFF0C;&#x8FD9;&#x6837;&#x5B83;&#x5C06;&#x5339;&#x914D;&#x4E00;&#x4E2A;&#x7EA6;&#x675F;&#xFF0C;&#x5426;&#x5219;&#x4E0D;&#x4F1A;&#x3002;&#x66F4;&#x591A;&#x4FE1;&#x606F;&#x8BF7;&#x53C2;&#x8003; <a href="articles/aliases.html">&#x522B;&#x540D;</a>&#x3002;</p>
+<p><a name="require"></a></p>
+<h4 id="require">require</h4>
+<p>&#x5FC5;&#x987B;&#x7684;&#x8F6F;&#x4EF6;&#x5305;&#x5217;&#x8868;&#xFF0C;&#x9664;&#x975E;&#x8FD9;&#x4E9B;&#x4F9D;&#x8D56;&#x88AB;&#x6EE1;&#x8DB3;&#xFF0C;&#x5426;&#x5219;&#x4E0D;&#x4F1A;&#x5B8C;&#x6210;&#x5B89;&#x88C5;&#x3002;</p>
+<p><a name="require-dev"></a></p>
+<h4 id="require-dev-root-only">require-dev <span>(root-only)</span></h4>
+<p>&#x8FD9;&#x4E2A;&#x5217;&#x8868;&#x662F;&#x4E3A;&#x5F00;&#x53D1;&#x6216;&#x6D4B;&#x8BD5;&#x7B49;&#x76EE;&#x7684;&#xFF0C;&#x989D;&#x5916;&#x5217;&#x51FA;&#x7684;&#x4F9D;&#x8D56;&#x3002;&#x201C;root &#x5305;&#x201D;&#x7684; require-dev &#x9ED8;&#x8BA4;&#x662F;&#x4F1A;&#x88AB;&#x5B89;&#x88C5;&#x7684;&#x3002;&#x7136;&#x800C; <code>install</code> &#x6216; <code>update</code> &#x652F;&#x6301;&#x4F7F;&#x7528; <code>--no-dev</code> &#x53C2;&#x6570;&#x6765;&#x8DF3;&#x8FC7; <code>require-dev</code> &#x5B57;&#x6BB5;&#x4E2D;&#x5217;&#x51FA;&#x7684;&#x5305;&#x3002;</p>
+<p><a name="conflict"></a></p>
+<h4 id="conflict">conflict</h4>
+<p>&#x6B64;&#x5217;&#x8868;&#x4E2D;&#x7684;&#x5305;&#x4E0E;&#x5F53;&#x524D;&#x5305;&#x7684;&#x8FD9;&#x4E2A;&#x7248;&#x672C;&#x51B2;&#x7A81;&#x3002;&#x5B83;&#x4EEC;&#x5C06;&#x4E0D;&#x5141;&#x8BB8;&#x540C;&#x65F6;&#x88AB;&#x5B89;&#x88C5;&#x3002;</p>
+<p>&#x8BF7;&#x6CE8;&#x610F;&#xFF0C;&#x5728; <code>conflict</code> &#x4E2D;&#x6307;&#x5B9A;&#x7C7B;&#x4F3C;&#x4E8E; <code>&lt;1.0, &gt;= 1.1</code> &#x7684;&#x7248;&#x672C;&#x8303;&#x56F4;&#x65F6;&#xFF0C;&#x8FD9;&#x8868;&#x793A;&#x5B83;&#x4E0E;&#x5C0F;&#x4E8E;1.0 <em>&#x5E76;&#x4E14;</em> &#x540C;&#x65F6;&#x5927;&#x7B49;&#x4E8E;1.1&#x7684;&#x7248;&#x672C;&#x51B2;&#x7A81;&#xFF0C;&#x8FD9;&#x5F88;&#x53EF;&#x80FD;&#x4E0D;&#x662F;&#x4F60;&#x60F3;&#x8981;&#x7684;&#x3002;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#x4F60;&#x53EF;&#x80FD;&#x60F3;&#x8981;&#x8868;&#x8FBE;&#x7684;&#x662F; <code>&lt;1.0 | &gt;= 1.1</code> &#x3002;</p>
+<p><a name="replace"></a></p>
+<h4 id="replace">replace</h4>
+<p>&#x8FD9;&#x4E2A;&#x5217;&#x8868;&#x4E2D;&#x7684;&#x5305;&#x5C06;&#x88AB;&#x5F53;&#x524D;&#x5305;&#x53D6;&#x4EE3;&#x3002;&#x8FD9;&#x4F7F;&#x4F60;&#x53EF;&#x4EE5; fork &#x4E00;&#x4E2A;&#x5305;&#xFF0C;&#x4EE5;&#x4E0D;&#x540C;&#x7684;&#x540D;&#x79F0;&#x548C;&#x7248;&#x672C;&#x53F7;&#x53D1;&#x5E03;&#xFF0C;&#x540C;&#x65F6;&#x8981;&#x6C42;&#x4F9D;&#x8D56;&#x4E8E;&#x539F;&#x5305;&#x7684;&#x5176;&#x5B83;&#x5305;&#xFF0C;&#x5728;&#x8FD9;&#x4E4B;&#x540E;&#x4F9D;&#x8D56;&#x4E8E;&#x4F60; fork &#x7684;&#x8FD9;&#x4E2A;&#x5305;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x53D6;&#x4EE3;&#x4E86;&#x539F;&#x6765;&#x7684;&#x5305;&#x3002;</p>
+<p>&#x8FD9;&#x5BF9;&#x4E8E;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5185;&#x90E8;&#x5305;&#x542B;&#x5B50;&#x5305;&#x7684;&#x4E3B;&#x5305;&#x4E5F;&#x975E;&#x5E38;&#x7684;&#x6709;&#x7528;&#x3002;&#x4F8B;&#x5982; symfony/symfony &#x8FD9;&#x4E2A;&#x4E3B;&#x5305;&#xFF0C;&#x5305;&#x542B;&#x4E86;&#x6240;&#x6709; Symfony &#x7684;&#x7EC4;&#x4EF6;&#xFF0C;&#x800C;&#x8FD9;&#x4E9B;&#x7EC4;&#x4EF6;&#x53C8;&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;&#x5355;&#x72EC;&#x7684;&#x5305;&#x8FDB;&#x884C;&#x53D1;&#x5E03;&#x3002;&#x5982;&#x679C;&#x4F60; require &#x4E86;&#x4E3B;&#x5305;&#xFF0C;&#x90A3;&#x4E48;&#x5B83;&#x5C31;&#x4F1A;&#x81EA;&#x52A8;&#x5B8C;&#x6210;&#x5176;&#x4E0B;&#x5404;&#x4E2A;&#x7EC4;&#x4EF6;&#x7684;&#x4EFB;&#x52A1;&#xFF0C;&#x56E0;&#x4E3A;&#x4E3B;&#x5305;&#x53D6;&#x4EE3;&#x4E86;&#x5B50;&#x5305;&#x3002;</p>
+<p>&#x6CE8;&#x610F;&#xFF0C;&#x5728;&#x4F7F;&#x7528;&#x4E0A;&#x8FF0;&#x65B9;&#x6CD5;&#x53D6;&#x4EE3;&#x5B50;&#x5305;&#x65F6;&#xFF0C;&#x901A;&#x5E38;&#x4F60;&#x5E94;&#x8BE5;&#x53EA;&#x5BF9;&#x5B50;&#x5305;&#x4F7F;&#x7528; <code>self.version</code> &#x8FD9;&#x4E00;&#x4E2A;&#x7248;&#x672C;&#x7EA6;&#x675F;&#xFF0C;&#x4EE5;&#x786E;&#x4FDD;&#x4E3B;&#x5305;&#x4EC5;&#x66FF;&#x6362;&#x6389;&#x5B50;&#x5305;&#x7684;&#x51C6;&#x786E;&#x7248;&#x672C;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4EFB;&#x4F55;&#x5176;&#x4ED6;&#x7248;&#x672C;&#x3002;</p>
+<p><a name="provide"></a></p>
+<h4 id="provide">provide</h4>
+<p>List of other packages that are provided by this package. This is mostly useful for common interfaces. A package could depend on some virtual <code>logger</code> package, any library that implements this logger interface would simply list it in <code>provide</code>.</p>
+<p><a name="suggest"></a></p>
+<h3 id="suggest">suggest</h3>
+<p>&#x5EFA;&#x8BAE;&#x5B89;&#x88C5;&#x7684;&#x5305;&#xFF0C;&#x5B83;&#x4EEC;&#x589E;&#x5F3A;&#x6216;&#x80FD;&#x591F;&#x4E0E;&#x5F53;&#x524D;&#x5305;&#x826F;&#x597D;&#x7684;&#x5DE5;&#x4F5C;&#x3002;&#x8FD9;&#x4E9B;&#x53EA;&#x662F;&#x4FE1;&#x606F;&#xFF0C;&#x5E76;&#x663E;&#x793A;&#x5728;&#x4F9D;&#x8D56;&#x5305;&#x5B89;&#x88C5;&#x5B8C;&#x6210;&#x4E4B;&#x540E;&#xFF0C;&#x7ED9;&#x4F60;&#x7684;&#x7528;&#x6237;&#x4E00;&#x4E2A;&#x5EFA;&#x8BAE;&#xFF0C;&#x4ED6;&#x4EEC;&#x53EF;&#x4EE5;&#x6DFB;&#x52A0;&#x66F4;&#x591A;&#x7684;&#x5305;&#x3002;</p>
+<p>&#x683C;&#x5F0F;&#x5982;&#x4E0B;&#xFF0C;&#x7248;&#x672C;&#x7EA6;&#x675F;&#x53D8;&#x6210;&#x4E86;&#x63CF;&#x8FF0;&#x4FE1;&#x606F;&#x3002;</p>
+<p>&#x5B9E;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;suggest&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;monolog/monolog&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Allows more advanced logging of the application flow&quot;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><a name="autoload"></a></p>
+<h3 id="autoload">autoload</h3>
+<p>PHP autoloader &#x7684;&#x81EA;&#x52A8;&#x52A0;&#x8F7D;&#x6620;&#x5C04;&#x3002;</p>
+<p>Currently <a href="http://www.php-fig.org/psr/psr-0/" target="_blank"><code>PSR-0</code></a> autoloading,
+<a href="http://www.php-fig.org/psr/psr-4/" target="_blank"><code>PSR-4</code></a> autoloading, <code>classmap</code> generation and
+<code>files</code> includes are supported. PSR-4 is the recommended way though since it offers
+greater ease of use (no need to regenerate the autoloader when you add classes).</p>
+<h4 id="psr-4">PSR-4</h4>
+<p>Under the <code>psr-4</code> key you define a mapping from namespaces to paths, relative to the
+package root. When autoloading a class like <code>Foo\\Bar\\Baz</code> a namespace prefix
+<code>Foo\\</code> pointing to a directory <code>src/</code> means that the autoloader will look for a
+file named <code>src/Bar/Baz.php</code> and include it if present. Note that as opposed to
+the older PSR-0 style, the prefix (<code>Foo\\</code>) is <strong>not</strong> present in the file path.</p>
+<p>Namespace prefixes must end in <code>\\</code> to avoid conflicts between similar prefixes.
+For example <code>Foo</code> would match classes in the <code>FooBar</code> namespace so the trailing
+backslashes solve the problem: <code>Foo\\</code> and <code>FooBar\\</code> are distinct.</p>
+<p>The PSR-4 references are all combined, during install/update, into a single
+key =&gt; value array which may be found in the generated file
+<code>vendor/composer/autoload_psr4.php</code>.</p>
+<p>Example:</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;autoload&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;psr-4&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;Monolog\\&quot;</span><span class="token operator">:</span> <span class="token string">&quot;src/&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;Vendor\\Namespace\\&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>If you need to search for a same prefix in multiple directories,
+you can specify them as an array as such:</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;autoload&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;psr-4&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token property">&quot;Monolog\\&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;src/&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;lib/&quot;</span><span class="token punctuation">]</span> <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>If you want to have a fallback directory where any namespace will be looked for,
+you can use an empty prefix like:</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;autoload&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;psr-4&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token property">&quot;&quot;</span><span class="token operator">:</span> <span class="token string">&quot;src/&quot;</span> <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><a name="PSR-0"></a></p>
+<h4 id="psr-0">PSR-0</h4>
+<p>&#x5728; <code>psr-0</code> key &#x4E0B;&#x4F60;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x5230;&#x5B9E;&#x9645;&#x8DEF;&#x5F84;&#x7684;&#x6620;&#x5C04;&#xFF08;&#x76F8;&#x5BF9;&#x4E8E;&#x5305;&#x7684;&#x6839;&#x76EE;&#x5F55;&#xFF09;&#x3002;&#x6CE8;&#x610F;&#xFF0C;&#x8FD9;&#x91CC;&#x540C;&#x6837;&#x652F;&#x6301; PEAR-style &#x65B9;&#x5F0F;&#x7684;&#x7EA6;&#x5B9A;&#xFF08;&#x4E0E;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x4E0D;&#x540C;&#xFF0C;PEAR &#x7C7B;&#x5E93;&#x5728;&#x7C7B;&#x540D;&#x4E0A;&#x91C7;&#x7528;&#x4E86;&#x4E0B;&#x5212;&#x7EBF;&#x5206;&#x9694;&#xFF09;&#x3002;</p>
+<p>&#x8BF7;&#x6CE8;&#x610F;&#xFF0C;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x7684;&#x7533;&#x660E;&#x5E94;&#x8BE5;&#x4EE5; <code>\\</code> &#x7ED3;&#x675F;&#xFF0C;&#x4EE5;&#x786E;&#x4FDD; autoloader &#x80FD;&#x591F;&#x51C6;&#x786E;&#x54CD;&#x5E94;&#x3002;&#x4F8B;&#xFF1A; <code>Foo</code> &#x5C06;&#x4F1A;&#x4E0E; <code>FooBar</code> &#x5339;&#x914D;&#xFF0C;&#x7136;&#x800C;&#x4EE5;&#x53CD;&#x659C;&#x6760;&#x7ED3;&#x675F;&#x5C31;&#x53EF;&#x4EE5;&#x89E3;&#x51B3;&#x8FD9;&#x6837;&#x7684;&#x95EE;&#x9898;&#xFF0C; <code>Foo\\</code> &#x548C; <code>FooBar\\</code> &#x5C06;&#x4F1A;&#x88AB;&#x533A;&#x5206;&#x5F00;&#x6765;&#x3002;</p>
+<p>&#x5728; install/update &#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;PSR-0 &#x5F15;&#x7528;&#x90FD;&#x5C06;&#x88AB;&#x7ED3;&#x5408;&#x4E3A;&#x4E00;&#x4E2A;&#x5355;&#x4E00;&#x7684;&#x952E;&#x503C;&#x5BF9;&#x6570;&#x7EC4;&#xFF0C;&#x5B58;&#x50A8;&#x81F3; <code>vendor/composer/autoload_namespaces.php</code> &#x6587;&#x4EF6;&#x4E2D;&#x3002;</p>
+<p>&#x5B9E;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;autoload&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;psr-0&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;Monolog\\&quot;</span><span class="token operator">:</span> <span class="token string">&quot;src/&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;Vendor\\Namespace\\&quot;</span><span class="token operator">:</span> <span class="token string">&quot;src/&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;Vendor_Namespace_&quot;</span><span class="token operator">:</span> <span class="token string">&quot;src/&quot;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x5982;&#x679C;&#x4F60;&#x9700;&#x8981;&#x641C;&#x7D22;&#x591A;&#x4E2A;&#x76EE;&#x5F55;&#x4E2D;&#x4E00;&#x4E2A;&#x76F8;&#x540C;&#x7684;&#x524D;&#x7F00;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5C06;&#x5B83;&#x4EEC;&#x6307;&#x5B9A;&#x4E3A;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;autoload&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;psr-0&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token property">&quot;Monolog\\&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;src/&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;lib/&quot;</span><span class="token punctuation">]</span> <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>PSR-0 &#x65B9;&#x5F0F;&#x5E76;&#x4E0D;&#x4EC5;&#x9650;&#x4E8E;&#x7533;&#x660E;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x7CBE;&#x786E;&#x5230;&#x7C7B;&#x7EA7;&#x522B;&#x7684;&#x6307;&#x5B9A;&#x3002;&#x8FD9;&#x5BF9;&#x4E8E;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x7C7B;&#x5728;&#x5168;&#x5C40;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x7684;&#x7C7B;&#x5E93;&#x662F;&#x975E;&#x5E38;&#x6709;&#x7528;&#x7684;&#xFF08;&#x5982;&#x679C; php &#x6E90;&#x6587;&#x4EF6;&#x4E5F;&#x4F4D;&#x4E8E;&#x5305;&#x7684;&#x6839;&#x76EE;&#x5F55;&#xFF09;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x7533;&#x660E;&#xFF1A;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;autoload&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;psr-0&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token property">&quot;UniqueGlobalClass&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span> <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x5982;&#x679C;&#x4F60;&#x60F3;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x76EE;&#x5F55;&#x4F5C;&#x4E3A;&#x4EFB;&#x4F55;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x7684;&#x5907;&#x7528;&#x76EE;&#x5F55;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7A7A;&#x7684;&#x524D;&#x7F00;&#xFF0C;&#x50CF;&#x8FD9;&#x6837;&#xFF1A;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;autoload&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;psr-0&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token property">&quot;&quot;</span><span class="token operator">:</span> <span class="token string">&quot;src/&quot;</span> <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><a name="Classmap"></a></p>
+<h4 id="classmap">Classmap</h4>
+<p><code>classmap</code> &#x5F15;&#x7528;&#x7684;&#x6240;&#x6709;&#x7EC4;&#x5408;&#xFF0C;&#x90FD;&#x4F1A;&#x5728; install/update &#x8FC7;&#x7A0B;&#x4E2D;&#x751F;&#x6210;&#xFF0C;&#x5E76;&#x5B58;&#x50A8;&#x5230; <code>vendor/composer/autoload_classmap.php</code> &#x6587;&#x4EF6;&#x4E2D;&#x3002;&#x8FD9;&#x4E2A; map &#x662F;&#x7ECF;&#x8FC7;&#x626B;&#x63CF;&#x6307;&#x5B9A;&#x76EE;&#x5F55;&#xFF08;&#x540C;&#x6837;&#x652F;&#x6301;&#x76F4;&#x63A5;&#x7CBE;&#x786E;&#x5230;&#x6587;&#x4EF6;&#xFF09;&#x4E2D;&#x6240;&#x6709;&#x7684; <code>.php</code> &#x548C; <code>.inc</code> &#x6587;&#x4EF6;&#x91CC;&#x5185;&#x7F6E;&#x7684;&#x7C7B;&#x800C;&#x5F97;&#x5230;&#x7684;&#x3002;</p>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x7528; classmap &#x751F;&#x6210;&#x652F;&#x6301;&#x652F;&#x6301;&#x81EA;&#x5B9A;&#x4E49;&#x52A0;&#x8F7D;&#x7684;&#x4E0D;&#x9075;&#x5FAA; PSR-0/4 &#x89C4;&#x8303;&#x7684;&#x7C7B;&#x5E93;&#x3002;&#x8981;&#x914D;&#x7F6E;&#x5B83;&#x6307;&#x5411;&#x9700;&#x8981;&#x7684;&#x76EE;&#x5F55;&#xFF0C;&#x4EE5;&#x4FBF;&#x80FD;&#x591F;&#x51C6;&#x786E;&#x641C;&#x7D22;&#x5230;&#x7C7B;&#x6587;&#x4EF6;&#x3002;</p>
+<p>&#x5B9E;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;autoload&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;classmap&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;src/&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;lib/&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Something.php&quot;</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><a name="Files"></a></p>
+<h4 id="files">Files</h4>
+<p>&#x5982;&#x679C;&#x4F60;&#x60F3;&#x8981;&#x660E;&#x786E;&#x7684;&#x6307;&#x5B9A;&#xFF0C;&#x5728;&#x6BCF;&#x6B21;&#x8BF7;&#x6C42;&#x65F6;&#x90FD;&#x8981;&#x8F7D;&#x5165;&#x67D0;&#x4E9B;&#x6587;&#x4EF6;&#xFF0C;&#x90A3;&#x4E48;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; &apos;files&apos; autoloading&#x3002;&#x901A;&#x5E38;&#x4F5C;&#x4E3A;&#x51FD;&#x6570;&#x5E93;&#x7684;&#x8F7D;&#x5165;&#x65B9;&#x5F0F;&#xFF08;&#x800C;&#x975E;&#x7C7B;&#x5E93;&#xFF09;&#x3002;</p>
+<p>&#x5B9E;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;autoload&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;files&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;src/MyLibrary/functions.php&quot;</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="autoload-dev-root-only">autoload-dev <span>(root-only)</span></h3>
+<p>This section allows to define autoload rules for development purposes.</p>
+<p>Classes needed to run the test suite should not be included in the main autoload
+rules to avoid polluting the autoloader in production and when other people use
+your package as a dependency.</p>
+<p>Therefore, it is a good idea to rely on a dedicated path for your unit tests
+and to add it within the autoload-dev section.</p>
+<p>Example:</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;autoload&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;psr-4&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token property">&quot;MyLibrary\\&quot;</span><span class="token operator">:</span> <span class="token string">&quot;src/&quot;</span> <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;autoload-dev&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;psr-4&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token property">&quot;MyLibrary\\Tests\\&quot;</span><span class="token operator">:</span> <span class="token string">&quot;tests/&quot;</span> <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><a name="include-path"></a></p>
+<h3 id="include-path">include-path</h3>
+<blockquote>
+<p><strong>&#x4E0D;&#x5EFA;&#x8BAE;</strong>&#xFF1A;&#x8FD9;&#x662F;&#x76EE;&#x524D;&#x552F;&#x4E00;&#x652F;&#x6301;&#x4F20;&#x7EDF;&#x9879;&#x76EE;&#x7684;&#x505A;&#x6CD5;&#xFF0C;&#x6240;&#x6709;&#x65B0;&#x7684;&#x4EE3;&#x7801;&#x90FD;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;&#x81EA;&#x52A8;&#x52A0;&#x8F7D;&#x3002;
+&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x8FC7;&#x65F6;&#x7684;&#x505A;&#x6CD5;&#xFF0C;&#x4F46; Composer &#x5C06;&#x4ECD;&#x7136;&#x4FDD;&#x7559;&#x8FD9;&#x4E2A;&#x529F;&#x80FD;&#x3002;</p>
+</blockquote>
+<p>&#x4E00;&#x4E2A;&#x8FFD;&#x52A0;&#x5230; PHP <code>include_path</code> &#x4E2D;&#x7684;&#x5217;&#x8868;&#x3002;</p>
+<p>&#x5B9E;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;include-path&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;lib/&quot;</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x53EF;&#x9009;&#x3002;</p>
+<p><a name="target-dir"></a></p>
+<h3 id="target-dir">target-dir</h3>
+<blockquote>
+<p><strong>DEPRECATED</strong>: This is only present to support legacy PSR-0 style autoloading,
+and all new code should preferably use PSR-4 without target-dir and projects
+using PSR-0 with PHP namespaces are encouraged to migrate to PSR-4 instead.</p>
+</blockquote>
+<p>&#x5B9A;&#x4E49;&#x5F53;&#x524D;&#x5305;&#x5B89;&#x88C5;&#x7684;&#x76EE;&#x6807;&#x6587;&#x4EF6;&#x5939;&#x3002;</p>
+<p>&#x82E5;&#x67D0;&#x4E2A;&#x5305;&#x7684;&#x6839;&#x76EE;&#x5F55;&#xFF0C;&#x5728;&#x5B83;&#x7533;&#x660E;&#x7684;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x4E4B;&#x4E0B;&#xFF0C;&#x5C06;&#x4E0D;&#x80FD;&#x6B63;&#x786E;&#x7684;&#x4F7F;&#x7528;&#x81EA;&#x52A8;&#x52A0;&#x8F7D;&#x3002;&#x800C; <code>target-dir</code> &#x89E3;&#x51B3;&#x4E86;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x3002;</p>
+<p>Symfony &#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;&#x3002;&#x5B83;&#x6709;&#x4E00;&#x4E9B;&#x72EC;&#x7ACB;&#x7684;&#x5305;&#x4F5C;&#x4E3A;&#x7EC4;&#x4EF6;&#x3002;Yaml &#x7EC4;&#x4EF6;&#x5C31;&#x653E;&#x5728; <code>Symfony\Component\Yaml</code> &#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x7136;&#x800C;&#x8FD9;&#x4E2A;&#x5305;&#x7684;&#x6839;&#x76EE;&#x5F55;&#x5B9E;&#x9645;&#x4E0A;&#x662F; <code>Yaml</code>&#x3002;&#x4E3A;&#x4E86;&#x4F7F;&#x81EA;&#x52A8;&#x52A0;&#x8F7D;&#x6210;&#x4E3A;&#x53EF;&#x80FD;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x786E;&#x4FDD;&#x5B83;&#x4E0D;&#x4F1A;&#x88AB;&#x5B89;&#x88C5;&#x5230; <code>vendor/symfony/yaml</code>&#xFF0C;&#x800C;&#x662F;&#x5B89;&#x88C5;&#x5230; <code>vendor/symfony/yaml/Symfony/Component/Yaml</code>&#xFF0C;&#x4ECE;&#x800C;&#x4F7F; Symfony &#x5B9A;&#x4E49;&#x7684; autoloader &#x53EF;&#x4EE5;&#x4ECE; <code>vendor/symfony/yaml</code> &#x52A0;&#x8F7D;&#x5B83;&#x3002;</p>
+<p>&#x8981;&#x505A;&#x5230;&#x8FD9;&#x4E00;&#x70B9; <code>autoload</code> &#x548C; <code>target-dir</code> &#x5E94;&#x8BE5;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;autoload&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;psr-0&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token property">&quot;Symfony\\Component\\Yaml\\&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span> <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;target-dir&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Symfony/Component/Yaml&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x53EF;&#x9009;&#x3002;</p>
+<p><a name="minimum-stability"></a></p>
+<h3 id="minimum-stability-root-only">minimum-stability <span>(root-only)</span></h3>
+<p>&#x8FD9;&#x5B9A;&#x4E49;&#x4E86;&#x901A;&#x8FC7;&#x7A33;&#x5B9A;&#x6027;&#x8FC7;&#x6EE4;&#x5305;&#x7684;&#x9ED8;&#x8BA4;&#x884C;&#x4E3A;&#x3002;&#x9ED8;&#x8BA4;&#x4E3A; <code>stable</code>&#xFF08;&#x7A33;&#x5B9A;&#xFF09;&#x3002;&#x56E0;&#x6B64;&#x5982;&#x679C;&#x4F60;&#x4F9D;&#x8D56;&#x4E8E;&#x4E00;&#x4E2A; <code>dev</code>&#xFF08;&#x5F00;&#x53D1;&#xFF09;&#x5305;&#xFF0C;&#x4F60;&#x5E94;&#x8BE5;&#x660E;&#x786E;&#x7684;&#x8FDB;&#x884C;&#x5B9A;&#x4E49;&#x3002;</p>
+<p>&#x5BF9;&#x6BCF;&#x4E2A;&#x5305;&#x7684;&#x6240;&#x6709;&#x7248;&#x672C;&#x90FD;&#x4F1A;&#x8FDB;&#x884C;&#x7A33;&#x5B9A;&#x6027;&#x68C0;&#x67E5;&#xFF0C;&#x800C;&#x4F4E;&#x4E8E; <code>minimum-stability</code> &#x6240;&#x8BBE;&#x5B9A;&#x7684;&#x6700;&#x4F4E;&#x7A33;&#x5B9A;&#x6027;&#x7684;&#x7248;&#x672C;&#xFF0C;&#x5C06;&#x5728;&#x89E3;&#x51B3;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#x65F6;&#x88AB;&#x5FFD;&#x7565;&#x3002;&#x5BF9;&#x4E8E;&#x4E2A;&#x522B;&#x5305;&#x7684;&#x7279;&#x6B8A;&#x7A33;&#x5B9A;&#x6027;&#x8981;&#x6C42;&#xFF0C;&#x53EF;&#x4EE5;&#x5728; <code>require</code> &#x6216; <code>require-dev</code> &#x4E2D;&#x8BBE;&#x5B9A;&#xFF08;&#x8BF7;&#x53C2;&#x8003; <a href="#Package-links">Package links</a>&#xFF09;&#x3002;</p>
+<p>&#x53EF;&#x7528;&#x7684;&#x7A33;&#x5B9A;&#x6027;&#x6807;&#x8BC6;&#xFF08;&#x6309;&#x5B57;&#x6BCD;&#x6392;&#x5E8F;&#xFF09;&#xFF1A;<code>dev</code>&#x3001;<code>alpha</code>&#x3001;<code>beta</code>&#x3001;<code>RC</code>&#x3001;<code>stable</code>&#x3002;</p>
+<p><a name="prefer-stable"></a></p>
+<h3 id="prefer-stable-root-only">prefer-stable <span>(root-only)</span></h3>
+<p>&#x5F53;&#x6B64;&#x9009;&#x9879;&#x88AB;&#x6FC0;&#x6D3B;&#x65F6;&#xFF0C;Composer &#x5C06;&#x4F18;&#x5148;&#x4F7F;&#x7528;&#x66F4;&#x7A33;&#x5B9A;&#x7684;&#x5305;&#x7248;&#x672C;&#x3002;</p>
+<p>&#x4F7F;&#x7528; <code>&quot;prefer-stable&quot;: true</code> &#x6765;&#x6FC0;&#x6D3B;&#x5B83;&#x3002;</p>
+<p><a name="repositories"></a></p>
+<h3 id="repositories-root-only">repositories <span>(root-only)</span></h3>
+<p>&#x4F7F;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x5305;&#x8D44;&#x6E90;&#x5E93;&#x3002;</p>
+<p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B; composer &#x53EA;&#x4F7F;&#x7528; packagist &#x4F5C;&#x4E3A;&#x5305;&#x7684;&#x8D44;&#x6E90;&#x5E93;&#x3002;&#x901A;&#x8FC7;&#x6307;&#x5B9A;&#x8D44;&#x6E90;&#x5E93;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4ECE;&#x5176;&#x4ED6;&#x5730;&#x65B9;&#x83B7;&#x53D6;&#x8D44;&#x6E90;&#x5305;&#x3002;</p>
+<p>Repositories &#x5E76;&#x4E0D;&#x662F;&#x9012;&#x5F52;&#x8C03;&#x7528;&#x7684;&#xFF0C;&#x53EA;&#x80FD;&#x5728;&#x201C;Root&#x5305;&#x201D;&#x7684; <code>composer.json</code> &#x4E2D;&#x5B9A;&#x4E49;&#x3002;&#x9644;&#x5C5E;&#x5305;&#x4E2D;&#x7684; <code>composer.json</code> &#x5C06;&#x88AB;&#x5FFD;&#x7565;&#x3002;</p>
+<p>&#x652F;&#x6301;&#x4EE5;&#x4E0B;&#x7C7B;&#x578B;&#x7684;&#x5305;&#x8D44;&#x6E90;&#x5E93;&#xFF1A;</p>
+<ul>
+<li><strong>composer:</strong> &#x4E00;&#x4E2A; composer &#x7C7B;&#x578B;&#x7684;&#x8D44;&#x6E90;&#x5E93;&#xFF0C;&#x662F;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x7F51;&#x7EDC;&#x670D;&#x52A1;&#x5668;&#xFF08;HTTP&#x3001;FTP&#x3001;SSH&#xFF09;&#x4E0A;&#x7684; <code>packages.json</code> &#x6587;&#x4EF6;&#xFF0C;&#x5B83;&#x5305;&#x542B;&#x4E00;&#x4E2A; <code>composer.json</code> &#x5BF9;&#x8C61;&#x7684;&#x5217;&#x8868;&#xFF0C;&#x6709;&#x989D;&#x5916;&#x7684; <code>dist</code> &#x548C;/&#x6216; <code>source</code> &#x4FE1;&#x606F;&#x3002;&#x8FD9;&#x4E2A; <code>packages.json</code> &#x6587;&#x4EF6;&#x662F;&#x7528;&#x4E00;&#x4E2A; PHP &#x6D41;&#x52A0;&#x8F7D;&#x7684;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>options</code> &#x53C2;&#x6570;&#x6765;&#x8BBE;&#x5B9A;&#x989D;&#x5916;&#x7684;&#x6D41;&#x4FE1;&#x606F;&#x3002;</li>
+<li><strong>vcs:</strong> &#x4ECE; git&#x3001;svn &#x548C; hg &#x53D6;&#x5F97;&#x8D44;&#x6E90;&#x3002;</li>
+<li><strong>pear:</strong> &#x4ECE; pear &#x83B7;&#x53D6;&#x8D44;&#x6E90;&#x3002;</li>
+<li><strong>package:</strong> &#x5982;&#x679C;&#x4F60;&#x4F9D;&#x8D56;&#x4E8E;&#x4E00;&#x4E2A;&#x9879;&#x76EE;&#xFF0C;&#x5B83;&#x4E0D;&#x63D0;&#x4F9B;&#x4EFB;&#x4F55;&#x5BF9; composer &#x7684;&#x652F;&#x6301;&#xFF0C;&#x4F60;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x8FD9;&#x79CD;&#x7C7B;&#x578B;&#x3002;&#x4F60;&#x57FA;&#x672C;&#x4E0A;&#x5C31;&#x53EA;&#x9700;&#x8981;&#x5185;&#x8054;&#x4E00;&#x4E2A; <code>composer.json</code> &#x5BF9;&#x8C61;&#x3002;</li>
+</ul>
+<p>&#x66F4;&#x591A;&#x76F8;&#x5173;&#x5185;&#x5BB9;&#xFF0C;&#x8BF7;&#x67E5;&#x770B; <a href="05-repositories.html">&#x8D44;&#x6E90;&#x5E93;</a>&#x3002;</p>
+<p>&#x5B9E;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;repositories&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;composer&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://packages.example.com&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;composer&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;https://packages.example.com&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;options&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">&quot;ssl&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;verify_peer&quot;</span><span class="token operator">:</span> <span class="token string">&quot;true&quot;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;vcs&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;https://github.com/Seldaek/monolog&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;pear&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://pear2.php.net&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;package&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;package&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;smarty/smarty&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;version&quot;</span><span class="token operator">:</span> <span class="token string">&quot;3.1.7&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;dist&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://www.smarty.net/files/Smarty-3.1.7.zip&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;zip&quot;</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;source&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://smarty-php.googlecode.com/svn/&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;svn&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;reference&quot;</span><span class="token operator">:</span> <span class="token string">&quot;tags/Smarty_3_1_7/distribution/&quot;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<blockquote>
+<p><strong>&#x6CE8;&#x610F;&#xFF1A;</strong> &#x987A;&#x5E8F;&#x662F;&#x975E;&#x5E38;&#x91CD;&#x8981;&#x7684;&#xFF0C;&#x5F53; Composer &#x67E5;&#x627E;&#x8D44;&#x6E90;&#x5305;&#x65F6;&#xFF0C;&#x5B83;&#x4F1A;&#x6309;&#x7167;&#x987A;&#x5E8F;&#x8FDB;&#x884C;&#x3002;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B; Packagist &#x662F;&#x6700;&#x540E;&#x52A0;&#x5165;&#x7684;&#xFF0C;&#x56E0;&#x6B64;&#x81EA;&#x5B9A;&#x4E49;&#x8BBE;&#x7F6E;&#x5C06;&#x53EF;&#x4EE5;&#x8986;&#x76D6; Packagist &#x4E0A;&#x7684;&#x5305;&#x3002;</p>
+</blockquote>
+<p><a name="config"></a></p>
+<h3 id="config-root-only">config <span>(root-only)</span></h3>
+<p>&#x4E0B;&#x9762;&#x7684;&#x8FD9;&#x4E00;&#x7EC4;&#x9009;&#x9879;&#xFF0C;&#x4EC5;&#x7528;&#x4E8E;&#x9879;&#x76EE;&#x3002;</p>
+<p>&#x652F;&#x6301;&#x4EE5;&#x4E0B;&#x9009;&#x9879;&#xFF1A;</p>
+<ul>
+<li><strong>process-timeout:</strong> &#x9ED8;&#x8BA4;&#x4E3A; <code>300</code>&#x3002;&#x5904;&#x7406;&#x8FDB;&#x7A0B;&#x7ED3;&#x675F;&#x65F6;&#x95F4;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;git &#x514B;&#x9686;&#x7684;&#x65F6;&#x95F4;&#x3002;Composer &#x5C06;&#x653E;&#x5F03;&#x8D85;&#x65F6;&#x7684;&#x4EFB;&#x52A1;&#x3002;&#x5982;&#x679C;&#x4F60;&#x7684;&#x7F51;&#x7EDC;&#x7F13;&#x6162;&#x6216;&#x8005;&#x6B63;&#x5728;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x5DE8;&#x5927;&#x7684;&#x5305;&#xFF0C;&#x4F60;&#x53EF;&#x80FD;&#x8981;&#x5C06;&#x8FD9;&#x4E2A;&#x503C;&#x8BBE;&#x7F6E;&#x7684;&#x66F4;&#x9AD8;&#x4E00;&#x4E9B;&#x3002;</li>
+<li><strong>use-include-path:</strong> &#x9ED8;&#x8BA4;&#x4E3A; <code>false</code>&#x3002;&#x5982;&#x679C;&#x4E3A; true&#xFF0C;Composer autoloader &#x8FD8;&#x5C06;&#x5728; PHP include path &#x4E2D;&#x7EE7;&#x7EED;&#x67E5;&#x627E;&#x7C7B;&#x6587;&#x4EF6;&#x3002;</li>
+<li><strong>preferred-install:</strong> &#x9ED8;&#x8BA4;&#x4E3A; <code>auto</code>&#x3002;&#x5B83;&#x7684;&#x503C;&#x53EF;&#x4EE5;&#x662F; <code>source</code>&#x3001;<code>dist</code> &#x6216; <code>auto</code>&#x3002;&#x8FD9;&#x4E2A;&#x9009;&#x9879;&#x5141;&#x8BB8;&#x4F60;&#x8BBE;&#x7F6E; Composer &#x7684;&#x9ED8;&#x8BA4;&#x5B89;&#x88C5;&#x65B9;&#x6CD5;&#x3002;</li>
+<li><strong>github-protocols:</strong> &#x9ED8;&#x8BA4;&#x4E3A; <code>[&quot;git&quot;, &quot;https&quot;, &quot;ssh&quot;]</code>&#x3002;&#x4ECE; github.com &#x514B;&#x9686;&#x65F6;&#x4F7F;&#x7528;&#x7684;&#x534F;&#x8BAE;&#x4F18;&#x5148;&#x7EA7;&#x6E05;&#x5355;&#xFF0C;&#x56E0;&#x6B64;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#x5C06;&#x4F18;&#x5148;&#x4F7F;&#x7528; git &#x534F;&#x8BAE;&#x8FDB;&#x884C;&#x514B;&#x9686;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x91CD;&#x65B0;&#x6392;&#x5217;&#x5B83;&#x4EEC;&#x7684;&#x6B21;&#x5E8F;&#xFF0C;&#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x7684;&#x7F51;&#x7EDC;&#x6709;&#x4EE3;&#x7406;&#x670D;&#x52A1;&#x5668;&#x6216; git &#x534F;&#x8BAE;&#x7684;&#x6548;&#x7387;&#x5F88;&#x4F4E;&#xFF0C;&#x4F60;&#x5C31;&#x53EF;&#x4EE5;&#x63D0;&#x5347; https &#x534F;&#x8BAE;&#x7684;&#x4F18;&#x5148;&#x7EA7;&#x3002;</li>
+<li><strong>github-oauth:</strong> &#x4E00;&#x4E2A;&#x57DF;&#x540D;&#x548C; oauth keys &#x7684;&#x5217;&#x8868;&#x3002;
+&#x4F8B;&#x5982;&#xFF1A;&#x4F7F;&#x7528; <code>{&quot;github.com&quot;: &quot;oauthtoken&quot;}</code> &#x4F5C;&#x4E3A;&#x6B64;&#x9009;&#x9879;&#x7684;&#x503C;&#xFF0C;
+&#x5C06;&#x4F7F;&#x7528; <code>oauthtoken</code> &#x6765;&#x8BBF;&#x95EE; github &#x4E0A;&#x7684;&#x79C1;&#x4EBA;&#x4ED3;&#x5E93;&#xFF0C;&#x5E76;&#x7ED5;&#x8FC7; low IP-based rate &#x7684; API &#x9650;&#x5236;&#x3002;
+<a href="articles/troubleshooting.html#api-rate-limit-and-oauth-tokens">&#x5173;&#x8054;&#x77E5;&#x8BC6;</a>
+&#x5173;&#x4E8E;&#x5982;&#x4F55;&#x83B7;&#x53D6; GitHub &#x7684; OAuth token&#x3002;</li>
+<li><strong>vendor-dir:</strong> &#x9ED8;&#x8BA4;&#x4E3A; <code>vendor</code>&#x3002;&#x901A;&#x8FC7;&#x8BBE;&#x7F6E;&#x4F60;&#x53EF;&#x4EE5;&#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#x5230;&#x4E0D;&#x540C;&#x7684;&#x76EE;&#x5F55;&#x3002;</li>
+<li><strong>bin-dir:</strong> &#x9ED8;&#x8BA4;&#x4E3A; <code>vendor/bin</code>&#x3002;&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x9879;&#x76EE;&#x5305;&#x542B;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#xFF0C;&#x5B83;&#x4EEC;&#x5C06;&#x88AB;&#x8FDE;&#x63A5;&#x5230;&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x3002;</li>
+<li><strong>cache-dir:</strong> unix &#x4E0B;&#x9ED8;&#x8BA4;&#x4E3A; <code>$home/cache</code>&#xFF0C;Windows &#x4E0B;&#x9ED8;&#x8BA4;&#x4E3A; <code>C:\Users\<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>user</span><span class="token punctuation">&gt;</span></span>\AppData\Local\Composer</code>&#x3002;&#x7528;&#x4E8E;&#x5B58;&#x50A8; composer &#x6240;&#x6709;&#x7684;&#x7F13;&#x5B58;&#x6587;&#x4EF6;&#x3002;&#x76F8;&#x5173;&#x4FE1;&#x606F;&#x8BF7;&#x67E5;&#x770B; <a href="03-cli.html#composer-home">COMPOSER_HOME</a>&#x3002;</li>
+<li><strong>cache-files-dir:</strong> &#x9ED8;&#x8BA4;&#x4E3A; <code>$cache-dir/files</code>&#x3002;&#x5B58;&#x50A8;&#x5305; zip &#x5B58;&#x6863;&#x7684;&#x76EE;&#x5F55;&#x3002;</li>
+<li><strong>cache-repo-dir:</strong> &#x9ED8;&#x8BA4;&#x4E3A; <code>$cache-dir/repo</code>&#x3002;&#x5B58;&#x50A8; <code>composer</code> &#x7C7B;&#x578B;&#x7684; VCS&#xFF08;<code>svn</code>&#x3001;<code>github</code>&#x3001;<code>bitbucket</code>&#xFF09; repos &#x76EE;&#x5F55;&#x3002;</li>
+<li><strong>cache-vcs-dir:</strong> &#x9ED8;&#x8BA4;&#x4E3A; <code>$cache-dir/vcs</code>&#x3002;&#x6B64;&#x76EE;&#x5F55;&#x7528;&#x4E8E;&#x5B58;&#x50A8; VCS &#x514B;&#x9686;&#x7684; <code>git</code>/<code>hg</code> &#x7C7B;&#x578B;&#x7684;&#x5143;&#x6570;&#x636E;&#xFF0C;&#x5E76;&#x52A0;&#x5FEB;&#x5B89;&#x88C5;&#x901F;&#x5EA6;&#x3002;</li>
+<li><strong>cache-files-ttl:</strong> &#x9ED8;&#x8BA4;&#x4E3A; <code>15552000</code>&#xFF08;6&#x4E2A;&#x6708;&#xFF09;&#x3002;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B; Composer &#x7F13;&#x5B58;&#x7684;&#x6240;&#x6709;&#x6570;&#x636E;&#x90FD;&#x5C06;&#x5728;&#x95F2;&#x7F6E;6&#x4E2A;&#x6708;&#x540E;&#x88AB;&#x5220;&#x9664;&#xFF0C;&#x8FD9;&#x4E2A;&#x9009;&#x9879;&#x5141;&#x8BB8;&#x4F60;&#x6765;&#x8C03;&#x6574;&#x8FD9;&#x4E2A;&#x65F6;&#x95F4;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5C06;&#x5176;&#x8BBE;&#x7F6E;&#x4E3A;0&#x4EE5;&#x7981;&#x7528;&#x7F13;&#x5B58;&#x3002;</li>
+<li><strong>cache-files-maxsize:</strong> &#x9ED8;&#x8BA4;&#x4E3A; <code>300MiB</code>&#x3002;Composer &#x7F13;&#x5B58;&#x7684;&#x6700;&#x5927;&#x5BB9;&#x91CF;&#xFF0C;&#x8D85;&#x51FA;&#x540E;&#x5C06;&#x4F18;&#x5148;&#x6E05;&#x9664;&#x65E7;&#x7684;&#x7F13;&#x5B58;&#x6570;&#x636E;&#xFF0C;&#x76F4;&#x5230;&#x7F13;&#x5B58;&#x91CF;&#x4F4E;&#x4E8E;&#x8FD9;&#x4E2A;&#x6570;&#x503C;&#x3002;</li>
+<li><strong>prepend-autoloader:</strong> &#x9ED8;&#x8BA4;&#x4E3A; <code>true</code>&#x3002;&#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x4E3A; false&#xFF0C;composer autoloader &#x5C06;&#x4E0D;&#x4F1A;&#x9644;&#x52A0;&#x5230;&#x73B0;&#x6709;&#x7684;&#x81EA;&#x52A8;&#x52A0;&#x8F7D;&#x673A;&#x5236;&#x4E2D;&#x3002;&#x8FD9;&#x6709;&#x65F6;&#x5019;&#x7528;&#x6765;&#x89E3;&#x51B3;&#x4E0E;&#x5176;&#x5B83;&#x81EA;&#x52A8;&#x52A0;&#x8F7D;&#x673A;&#x5236;&#x4EA7;&#x751F;&#x7684;&#x51B2;&#x7A81;&#x3002;</li>
+<li><strong>autoloader-suffix:</strong> &#x9ED8;&#x8BA4;&#x4E3A; <code>null</code>&#x3002;Composer autoloader &#x7684;&#x540E;&#x7F00;&#xFF0C;&#x5F53;&#x8BBE;&#x7F6E;&#x4E3A;&#x7A7A;&#x65F6;&#x5C06;&#x4F1A;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;&#x968F;&#x673A;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x3002;</li>
+<li><strong>optimize-autoloader</strong> Defaults to <code>false</code>. Always optimize when dumping
+the autoloader.</li>
+<li><strong>github-domains:</strong> &#x9ED8;&#x8BA4;&#x4E3A; <code>[&quot;github.com&quot;]</code>&#x3002;&#x4E00;&#x4E2A; github mode &#x4E0B;&#x7684;&#x57DF;&#x540D;&#x5217;&#x8868;&#x3002;&#x8FD9;&#x662F;&#x7528;&#x4E8E;GitHub&#x7684;&#x4F01;&#x4E1A;&#x8BBE;&#x7F6E;&#x3002;</li>
+<li><strong>notify-on-install:</strong> &#x9ED8;&#x8BA4;&#x4E3A; <code>true</code>&#x3002;Composer &#x5141;&#x8BB8;&#x8D44;&#x6E90;&#x4ED3;&#x5E93;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x901A;&#x77E5;&#x7684; URL&#xFF0C;&#x4EE5;&#x4FBF;&#x6709;&#x4EBA;&#x4ECE;&#x5176;&#x4E0A;&#x5B89;&#x88C5;&#x8D44;&#x6E90;&#x5305;&#x65F6;&#x80FD;&#x591F;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x53CD;&#x9988;&#x901A;&#x77E5;&#x3002;&#x6B64;&#x9009;&#x9879;&#x5141;&#x8BB8;&#x4F60;&#x7981;&#x7528;&#x8BE5;&#x884C;&#x4E3A;&#x3002;</li>
+<li><strong>discard-changes:</strong> &#x9ED8;&#x8BA4;&#x4E3A; <code>false</code>&#xFF0C;&#x5B83;&#x7684;&#x503C;&#x53EF;&#x4EE5;&#x662F; <code>true</code>&#x3001;<code>false</code> &#x6216; <code>stash</code>&#x3002;&#x8FD9;&#x4E2A;&#x9009;&#x9879;&#x5141;&#x8BB8;&#x4F60;&#x8BBE;&#x7F6E;&#x5728;&#x975E;&#x4EA4;&#x4E92;&#x6A21;&#x5F0F;&#x4E0B;&#xFF0C;&#x5F53;&#x5904;&#x7406;&#x5931;&#x8D25;&#x7684;&#x66F4;&#x65B0;&#x65F6;&#x91C7;&#x7528;&#x7684;&#x5904;&#x7406;&#x65B9;&#x5F0F;&#x3002;<code>true</code> &#x8868;&#x793A;&#x6C38;&#x8FDC;&#x653E;&#x5F03;&#x66F4;&#x6539;&#x3002;<code>&quot;stash&quot;</code> &#x8868;&#x793A;&#x7EE7;&#x7EED;&#x5C1D;&#x8BD5;&#x3002;Use this for CI servers or deploy scripts if you tend to have modified vendors.</li>
+</ul>
+<p>&#x5B9E;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;config&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;bin-dir&quot;</span><span class="token operator">:</span> <span class="token string">&quot;bin&quot;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><a name="scripts"></a></p>
+<h3 id="scripts-root-only">scripts <span>(root-only)</span></h3>
+<p>Composer &#x5141;&#x8BB8;&#x4F60;&#x5728;&#x5B89;&#x88C5;&#x8FC7;&#x7A0B;&#x4E2D;&#x7684;&#x5404;&#x4E2A;&#x9636;&#x6BB5;&#x6302;&#x63A5;&#x811A;&#x672C;&#x3002;</p>
+<p>&#x66F4;&#x591A;&#x7EC6;&#x8282;&#x548C;&#x6848;&#x4F8B;&#x8BF7;&#x67E5;&#x770B; <a href="articles/scripts.html">&#x811A;&#x672C;</a>&#x3002;</p>
+<p><a name="extra"></a></p>
+<h3 id="extra">extra</h3>
+<p>&#x4EFB;&#x610F;&#x7684;&#xFF0C;&#x4F9B; <code>scripts</code> &#x4F7F;&#x7528;&#x7684;&#x989D;&#x5916;&#x6570;&#x636E;&#x3002;.</p>
+<p>&#x8FD9;&#x53EF;&#x4EE5;&#x662F;&#x51E0;&#x4E4E;&#x4EFB;&#x4F55;&#x4E1C;&#x897F;&#x3002;&#x82E5;&#x8981;&#x4ECE;&#x811A;&#x672C;&#x4E8B;&#x4EF6;&#x8BBF;&#x95EE;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x505A;&#xFF1A;</p>
+<pre class="language-"><code class="lang-php"><span class="token variable">$extra</span> <span class="token operator">=</span> <span class="token variable">$event</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">getComposer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">getPackage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">getExtra</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x53EF;&#x9009;&#x3002;</p>
+<p><a name="bin"></a></p>
+<h3 id="bin">bin</h3>
+<p>&#x8BE5;&#x5C5E;&#x6027;&#x7528;&#x4E8E;&#x6807;&#x6CE8;&#x4E00;&#x7EC4;&#x5E94;&#x88AB;&#x89C6;&#x4E3A;&#x4E8C;&#x8FDB;&#x5236;&#x811A;&#x672C;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x4ED6;&#x4EEC;&#x4F1A;&#x88AB;&#x8F6F;&#x94FE;&#x63A5;&#x5230;&#xFF08;config &#x5BF9;&#x8C61;&#x4E2D;&#x7684;&#xFF09;<code>bin-dir</code> &#x5C5E;&#x6027;&#x6240;&#x6807;&#x6CE8;&#x7684;&#x76EE;&#x5F55;&#xFF0C;&#x4EE5;&#x4F9B;&#x5176;&#x4ED6;&#x4F9D;&#x8D56;&#x5305;&#x8C03;&#x7528;&#x3002;</p>
+<p>&#x8BE6;&#x7EC6;&#x8BF7;&#x67E5;&#x770B; <a href="articles/vendor-binaries.html">Vendor Binaries</a>&#x3002;</p>
+<p>&#x53EF;&#x9009;&#x3002;</p>
+<p><a name="archive"></a></p>
+<h3 id="archive">archive</h3>
+<p>&#x8FD9;&#x4E9B;&#x9009;&#x9879;&#x5728;&#x521B;&#x5EFA;&#x5305;&#x5B58;&#x6863;&#x65F6;&#x4F7F;&#x7528;&#x3002;</p>
+<p>&#x652F;&#x6301;&#x4EE5;&#x4E0B;&#x9009;&#x9879;&#xFF1A;</p>
+<ul>
+<li><strong>exclude:</strong> &#x5141;&#x8BB8;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x9700;&#x8981;&#x88AB;&#x6392;&#x9664;&#x7684;&#x8DEF;&#x5F84;&#x7684;&#x5217;&#x8868;&#x3002;&#x4F7F;&#x7528;&#x4E0E; .gitignore &#x6587;&#x4EF6;&#x76F8;&#x540C;&#x7684;&#x8BED;&#x6CD5;&#x3002;&#x4E00;&#x4E2A;&#x524D;&#x5BFC;&#x7684;&#xFF08;!&#xFF09;&#x5C06;&#x4F1A;&#x4F7F;&#x5176;&#x53D8;&#x6210;&#x767D;&#x540D;&#x5355;&#x800C;&#x65E0;&#x89C6;&#x4E4B;&#x524D;&#x76F8;&#x540C;&#x76EE;&#x5F55;&#x7684;&#x6392;&#x9664;&#x8BBE;&#x5B9A;&#x3002;&#x524D;&#x5BFC;&#x659C;&#x6760;&#x53EA;&#x4F1A;&#x5728;&#x9879;&#x76EE;&#x7684;&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;&#x7684;&#x5F00;&#x5934;&#x5339;&#x914D;&#x3002;&#x661F;&#x53F7;&#x4E3A;&#x901A;&#x914D;&#x7B26;&#x3002;</li>
+</ul>
+<p>&#x5B9E;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;archive&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;exclude&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;/foo/bar&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;baz&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;/*.test&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;!/foo/bar/baz&quot;</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x5728;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x4E2D;&#x6211;&#x4EEC; include <code>/dir/foo/bar/file</code>&#x3001;<code>/foo/bar/baz</code>&#x3001;<code>/file.php</code>&#x3001;<code>/foo/my.test</code> &#x4F46;&#x6392;&#x9664;&#x4E86; <code>/foo/bar/any</code>&#x3001;<code>/foo/baz</code>&#x3001;<code>/my.test</code>&#x3002;</p>
+<p>&#x53EF;&#x9009;&#x3002;</p>
+<p>&#x2190; <a href="03-cli.html">&#x547D;&#x4EE4;&#x884C;</a>  |  <a href="05-repositories.html">&#x8D44;&#x6E90;&#x5E93;</a> &#x2192;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="03-cli.html" class="navigation navigation-prev " aria-label="Previous page: 03 Cli">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="05-repositories.html" class="navigation navigation-next " aria-label="Next page: 05 Repositories">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"04 Schema","level":"1.8","depth":1,"next":{"title":"05 Repositories","level":"1.9","depth":1,"path":"05-repositories.md","ref":"05-repositories.md","articles":[]},"previous":{"title":"03 Cli","level":"1.7","depth":1,"path":"03-cli.md","ref":"03-cli.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Composer 中文文档","language":"zh-hans","links":{"sidebar":{"Home":"https://docs.khs1994.com"}},"gitbook":"*"},"file":{"path":"04-schema.md","mtime":"2020-03-01T00:14:17.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-01T00:14:54.926Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

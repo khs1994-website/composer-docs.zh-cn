@@ -17,8 +17,11 @@ jobs:
         with:
           fetch-depth: 2
       - name: Fetch upstream
+        id: upstream
         run: |
           git clone --depth=1 ${GIT_URL} composer
+          UPSTREAM_COMMIT_SHA=`git -C composer log --abbrev-commit --pretty="%h" -1`
+          echo "::set-output name=UPSTREAM_COMMIT_SHA::${UPSTREAM_COMMIT_SHA}"
         env:
           GIT_URL: https://github.com/5-say/composer-doc-cn
       - name: Generate SUMMARY
@@ -46,6 +49,6 @@ jobs:
           PCIT_GIT_URL: github.com/${{ github.repository }}
           PCIT_KEEP_HISTORY: "true"
           PCIT_LOCAL_DIR: composer/cn-introduction
-          PCIT_MESSAGE: Sync from 5-say/composer-doc-cn by PCIT ${{ github.sha }}
+          PCIT_MESSAGE: Sync from 5-say/composer-doc-cn@${{ steps.upstream.outputs.UPSTREAM_COMMIT_SHA }} by PCIT
           PCIT_TARGET_BRANCH: master
           PCIT_USERNAME: khs1994
